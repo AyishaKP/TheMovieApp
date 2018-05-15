@@ -24,6 +24,7 @@ PODS:
   - RealmSwift (3.1.1):
     - Realm (= 3.1.1)
   - SVProgressHUD (2.2.2)
+  - SwiftyBeaver (1.5.1)
 
 DEPENDENCIES:
   - Alamofire
@@ -33,6 +34,7 @@ DEPENDENCIES:
   - PromiseKit/Alamofire
   - RealmSwift
   - SVProgressHUD
+  - SwiftyBeaver
 
 SPEC CHECKSUMS:
   Alamofire: f41a599bd63041760b26d393ec1069d9d7b917f4
@@ -42,7 +44,8 @@ SPEC CHECKSUMS:
   Realm: 42d1c38a5b1bbcc828b48a7ce702cb86fc68adf4
   RealmSwift: d31937ca6a6ee54acde64ec839523c0a3c04924b
   SVProgressHUD: 59b2d3dabacbd051576d21d32293ca7228dc18b0
+  SwiftyBeaver: 4f74563624b2c1e821c522c54142b5dd5ebb0f30
 
-PODFILE CHECKSUM: a11d22182cd39f8331ed3f57fb9d674f9726ce85
+PODFILE CHECKSUM: 152f24a3860cf55d3d53c95143da3047a0e605b8
 
 COCOAPODS: 1.2.0

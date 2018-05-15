@@ -272,6 +272,7 @@
 				5A137FA220A9A04A00F3C789 /* Resources */,
 				14474D28476AB78CF1D589CF /* [CP] Embed Pods Frameworks */,
 				76C126BA5E2E9B307123EA6A /* [CP] Copy Pods Resources */,
+				5A13800D20A9E82200F3C789 /* SwiftLint */,
 			);
 			buildRules = (
 			);
@@ -457,6 +458,20 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TheMovieAppTests/Pods-TheMovieAppTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		5A13800D20A9E82200F3C789 /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n    cd TheMovieApp\n    swiftlint autocorrect\n    swiftlint\nelse\n    echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
 		};
 		65ACAC76BC2E95E8871FB52A /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
