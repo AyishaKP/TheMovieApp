@@ -19,11 +19,11 @@ extension Requestable {
     var baseUrl: String {
         return "api.themoviedb.org"
     }
-    var path: String {
-        return "3/search/movie"
+    var pathType: String {
+        return "3"
     }
     var url: URL {
-        return URL(string: "\(`protocol`)://\(baseUrl)/\(path)?") ?? URL(fileURLWithPath: "")
+        return URL(string: "\(`protocol`)://\(baseUrl)/\(pathType)/") ?? URL(fileURLWithPath: "")
     }
     var method: Alamofire.HTTPMethod {
         return .get

@@ -14,7 +14,7 @@ protocol Requestable: URLRequestConvertible {
     var method: Alamofire.HTTPMethod { get }
     var `protocol`: String { get }
     var baseUrl: String { get }
-    var deployment: String { get }
+    var pathType: String { get }
     var path: String { get }
     var apiKey: String { get }
     var url: URL { get }

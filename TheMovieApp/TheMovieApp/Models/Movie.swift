@@ -7,3 +7,14 @@
 //
 
 import Foundation
+import ObjectMapper
+
+class Movie: Mappable {
+    
+    required init?(map: Map) {
+        
+    }
+    func mapping(map: Map) {
+        
+    }
+}
