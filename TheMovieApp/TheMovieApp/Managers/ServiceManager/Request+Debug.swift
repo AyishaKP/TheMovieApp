@@ -16,6 +16,14 @@ enum ServiceError: Error {
     case notFound
     case invalidResponse
     case timeOut
+
+    var localizedDescription: String {
+        switch self {
+        case .unknownError:
+            return "Sorry, something went wrong!"
+        default: return "Sorry, something went wrong!"
+        }
+    }
 }
 
 public extension Alamofire.Request {
@@ -46,7 +54,7 @@ public extension Alamofire.DataRequest {
             }
 
             var result: Alamofire.Request.ValidationResult = .success
-            
+
             // check if response is html
             if (response.allHeaderFields["Content-Type"] as? String)?.contains("text/html") == true {
                 Log.info(String(code) + " " + requestURL + "\n\(string)")
