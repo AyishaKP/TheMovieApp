@@ -18,11 +18,10 @@ class Movie: Mappable {
     var voteCount = ""
     var popularity: String = ""
     var originalLanguage: String = ""
-    var releaseDate: String = ""
+    var releaseDate = Date()
     var backdropPath: String = ""
 
-    required convenience init?(map: Map) {
-        self.init()
+    required init?(map: Map) {
     }
     func mapping(map: Map) {
         movieId <- map["id"]
@@ -33,7 +32,7 @@ class Movie: Mappable {
         voteCount <- map["vote_count"]
         popularity <- map["popularity"]
         originalLanguage <- map["original_language"]
-        releaseDate <- map["release_date"]
+        releaseDate <- (map["release_date"], DateTransform())
         backdropPath <- map["backdrop_path"]
     }
 }
