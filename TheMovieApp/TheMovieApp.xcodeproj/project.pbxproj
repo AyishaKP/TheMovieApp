@@ -12,7 +12,7 @@
 		5A137FB220A9A04A00F3C789 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A137FB020A9A04A00F3C789 /* LaunchScreen.storyboard */; };
 		5A137FBD20A9A04A00F3C789 /* TheMovieAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A137FBC20A9A04A00F3C789 /* TheMovieAppTests.swift */; };
 		5A137FC820A9A04A00F3C789 /* TheMovieAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A137FC720A9A04A00F3C789 /* TheMovieAppUITests.swift */; };
-		5A137FF020A9C6F600F3C789 /* RequestableProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A137FEF20A9C6F600F3C789 /* RequestableProtocol.swift */; };
+		5A137FF020A9C6F600F3C789 /* Requestable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A137FEF20A9C6F600F3C789 /* Requestable.swift */; };
 		5A137FF220A9C83300F3C789 /* Requestable+AlamofireObjectMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A137FF120A9C83300F3C789 /* Requestable+AlamofireObjectMapper.swift */; };
 		5A137FF420A9C84900F3C789 /* Request+Debug.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A137FF320A9C84900F3C789 /* Request+Debug.swift */; };
 		5A137FF620A9C86C00F3C789 /* Requestable+PromiseAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A137FF520A9C86C00F3C789 /* Requestable+PromiseAPI.swift */; };
@@ -62,7 +62,7 @@
 		5A137FC320A9A04A00F3C789 /* TheMovieAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TheMovieAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A137FC720A9A04A00F3C789 /* TheMovieAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheMovieAppUITests.swift; sourceTree = "<group>"; };
 		5A137FC920A9A04A00F3C789 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5A137FEF20A9C6F600F3C789 /* RequestableProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestableProtocol.swift; sourceTree = "<group>"; };
+		5A137FEF20A9C6F600F3C789 /* Requestable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Requestable.swift; sourceTree = "<group>"; };
 		5A137FF120A9C83300F3C789 /* Requestable+AlamofireObjectMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Requestable+AlamofireObjectMapper.swift"; sourceTree = "<group>"; };
 		5A137FF320A9C84900F3C789 /* Request+Debug.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Request+Debug.swift"; sourceTree = "<group>"; };
 		5A137FF520A9C86C00F3C789 /* Requestable+PromiseAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Requestable+PromiseAPI.swift"; sourceTree = "<group>"; };
@@ -209,10 +209,10 @@
 		5A137FEE20A9C6AA00F3C789 /* ServiceManager */ = {
 			isa = PBXGroup;
 			children = (
-				5A137FEF20A9C6F600F3C789 /* RequestableProtocol.swift */,
+				5A137FEF20A9C6F600F3C789 /* Requestable.swift */,
 				5A137FF120A9C83300F3C789 /* Requestable+AlamofireObjectMapper.swift */,
-				5A137FF320A9C84900F3C789 /* Request+Debug.swift */,
 				5A137FF520A9C86C00F3C789 /* Requestable+PromiseAPI.swift */,
+				5A137FF320A9C84900F3C789 /* Request+Debug.swift */,
 			);
 			path = ServiceManager;
 			sourceTree = "<group>";
@@ -566,7 +566,7 @@
 				5A137FF620A9C86C00F3C789 /* Requestable+PromiseAPI.swift in Sources */,
 				5A137FFA20A9DB1700F3C789 /* Movie.swift in Sources */,
 				5A137FF420A9C84900F3C789 /* Request+Debug.swift in Sources */,
-				5A137FF020A9C6F600F3C789 /* RequestableProtocol.swift in Sources */,
+				5A137FF020A9C6F600F3C789 /* Requestable.swift in Sources */,
 				5A137FA820A9A04A00F3C789 /* AppDelegate.swift in Sources */,
 				5A137FFE20A9DB8A00F3C789 /* MovieDetailsTableViewController.swift in Sources */,
 				5A13800A20A9DD8100F3C789 /* UIColor+Extensions.swift in Sources */,
@@ -574,7 +574,6 @@
 				5A13800C20A9DDAC00F3C789 /* UIFont+Extensions.swift in Sources */,
 				5A18613220AA98FA00BAED0B /* Movie+Router.swift in Sources */,
 				5A137FF220A9C83300F3C789 /* Requestable+AlamofireObjectMapper.swift in Sources */,
-				5A18613420AAC15200BAED0B /* Movie+Handler.swift in Sources */,
 				5A18613420AAC15200BAED0B /* Movie+SearchHandler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
