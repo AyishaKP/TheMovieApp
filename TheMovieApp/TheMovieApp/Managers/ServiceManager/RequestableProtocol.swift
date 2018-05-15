@@ -18,8 +18,8 @@ protocol Requestable: URLRequestConvertible {
     var path: String { get }
     var apiKey: String { get }
     var url: URL { get }
-    var parameters: Parameters { get }
-
+    var parameters: Alamofire.Parameters { get }
+    var encoding: ParameterEncoding { get }
     @discardableResult func call<T: BaseMappable>
         (with responseObject:@escaping (DataResponse<T>) -> Void) -> DataRequest
     @discardableResult func call<T: BaseMappable>
