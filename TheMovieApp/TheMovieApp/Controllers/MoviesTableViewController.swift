@@ -7,11 +7,24 @@
 //
 
 import UIKit
+import PromiseKit
+import SwiftyBeaver
 
 class MoviesTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        firstly { () -> Promise<SearchHandler> in
+            Movie.Router.search("batman", page: 1).createRequest()
+            }.then { (handler: SearchHandler) -> Void in
+                SwiftyBeaver.debug(handler.message)
+                SwiftyBeaver.debug(handler.totalResults)
+            }.catch { err in
+                if let error: ServiceError = err as? ServiceError {
+                    SwiftyBeaver.error(error.localizedDescription)
+                }
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -23,21 +36,19 @@ class MoviesTableViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return 1
     }
 
-    /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
-
-        return cell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "movieListCellID",
+                                                 for: indexPath) as? MovieTableViewCell
+        cell?.textLabel?.text = "hi"
+        return cell!
     }
-    */
+
 }
