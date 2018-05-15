@@ -11,42 +11,32 @@ import UIKit
 import Alamofire
 
 extension Movie {
-        enum Router: Requestable {
-        case getMovieList(_: String, _: MovieHandler)
+    enum Router: Requestable {
+        case search(_: String, page: Int)
         var path: String {
             switch self {
-            case .getMovieList:
+            case .search:
                 return "/search/movie"
             }
         }
         var method: Alamofire.HTTPMethod {
             switch self {
-            case .getMovieList:
+            case .search:
                 return .get
                 }
-            }
-        var parameters:Parameters?  {
+        }
+        var parameters: Parameters? {
             switch self {
-            case .getMovieList(let query, let movieTitle):
-                return ["query":query, "page":movieTitle.page]
+            case .search(let query, let page):
+                return ["query": query, "page": page]
                 }
-            }
+        }
         var encoding: ParameterEncoding {
             switch self {
-            case .getMovieList:
+            case .search:
                 return URLEncoding.default
-            default:
-                return JSONEncoding.default
             }
         }
-        
-        func asURLRequest() throws -> URLRequest {
-            var urlRequest = URLRequest(url: url.appendingPathComponent(path))
-            urlRequest.httpMethod = method.rawValue
-            return try encoding.encode(urlRequest, with: parameters)
-            
-            }
-        }
+
     }
-
-
+}
