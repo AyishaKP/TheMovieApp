@@ -16,7 +16,12 @@ protocol Requestable: URLRequestConvertible {
     var baseUrl: String { get }
     var deployment: String { get }
     var path: String { get }
+    var apiKey: String { get }
     var url: URL { get }
     var parameters: Parameters { get }
-}
 
+    @discardableResult func call<T: BaseMappable>
+        (with responseObject:@escaping (DataResponse<T>) -> Void) -> DataRequest
+    @discardableResult func call<T: BaseMappable>
+        (with responseArray:@escaping (DataResponse<[T]>) -> Void) -> DataRequest
+}
