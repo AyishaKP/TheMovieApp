@@ -14,8 +14,9 @@ import ObjectMapper
 
 extension Requestable {
 
-    func request<T: BaseMappable>() -> Promise<T> {
+    func createRequest<T: BaseMappable>() -> Promise<T> {
         UIApplication.shared.isNetworkActivityIndicatorVisible = true
+
         return Promise { (fulfil, reject) -> Void in
             call { (response: DataResponse<T>) in
 
@@ -34,5 +35,6 @@ extension Requestable {
                 fulfil(value)
             }
         }
+
     }
 }
