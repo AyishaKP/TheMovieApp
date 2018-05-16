@@ -13,6 +13,7 @@ import Alamofire
 extension Movie {
     enum Router: Requestable {
         case search(_: String, page: Int)
+        static let imageUrl: String = "http://image.tmdb.org/t/p/w92/"
         var path: String {
             switch self {
             case .search:
@@ -23,13 +24,13 @@ extension Movie {
             switch self {
             case .search:
                 return .get
-                }
+            }
         }
         var parameters: Parameters? {
             switch self {
             case .search(let query, let page):
                 return ["query": query, "page": page]
-                }
+            }
         }
         var encoding: ParameterEncoding {
             switch self {
