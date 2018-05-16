@@ -10,10 +10,8 @@ import UIKit
 
 extension UIColor {
 
-    static let darkRed = UIColor(hex: 0xf80000)
     static let transparentBlack = UIColor(hex: 0x000000, alpha: 0.5)
-    static let rgbRed = UIColor(red: 255, green: 0, blue: 0)
-
+    static let swanWhite = UIColor(red: 247, green: 241, blue: 227)
     // Create a UIColor from RGB
     convenience init(red: Int, green: Int, blue: Int, alpha: CGFloat = 1.0) {
         self.init(
@@ -23,7 +21,6 @@ extension UIColor {
             alpha: alpha
         )
     }
-
     // Create a UIColor from a hex value (E.g 0x000000)
     convenience init(hex: Int, alpha: CGFloat = 1.0) {
         self.init(
