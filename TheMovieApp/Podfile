@@ -14,8 +14,9 @@ target 'TheMovieApp' do
   pod 'PromiseKit'
   pod 'PromiseKit/Alamofire'
   pod 'AlamofireObjectMapper'
-  pod 'SVProgressHUD'
   pod 'SwiftyBeaver'
+  pod 'SDWebImage', '~> 4.0'
+
   target 'TheMovieAppTests' do
     inherit! :search_paths
     # Pods for testing

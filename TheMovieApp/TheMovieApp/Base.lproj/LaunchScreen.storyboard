@@ -23,7 +23,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_splash_careem" translatesAutoresizingMaskIntoConstraints="NO" id="1gN-vt-Ved">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="movie_theater" translatesAutoresizingMaskIntoConstraints="NO" id="1gN-vt-Ved">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WELCOME TO CAREEM MOVIE APP" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tJN-7C-hsB">
@@ -52,6 +52,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="ic_splash_careem" width="640" height="360"/>
+        <image name="movie_theater" width="320" height="341"/>
     </resources>
 </document>
