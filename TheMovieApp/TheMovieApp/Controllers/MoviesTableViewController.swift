@@ -81,47 +81,52 @@ class MoviesTableViewController: UITableViewController {
 
     func fetchMovies(with searchText: String) {
         searchController.dismiss(animated: true, completion: nil)
-        firstly { () -> Promise<SearchHandler> in
-            Movie.Router.search(searchText, page: page + 1).createRequest()
-            }.then { [weak self] (handler: SearchHandler) -> Void in
-
-                guard let weakSelf = self else { return }
-
-                guard handler.movies.count > 0 else {
-                    weakSelf.movies.removeAll()
+        if NetworkManager.shared.isReachable {
+            firstly { () -> Promise<SearchHandler> in
+                Movie.Router.search(searchText, page: page + 1).createRequest()
+                }.then { [weak self] (handler: SearchHandler) -> Void in
+                    
+                    guard let weakSelf = self else { return }
+                    
+                    guard handler.movies.count > 0 else {
+                        weakSelf.movies.removeAll()
+                        DispatchQueue.main.async {
+                            weakSelf.tableView.reloadData()
+                        }
+                        return
+                    }
+                    do {
+                        let realm = try Realm()
+                        let search = Search()
+                        try realm .write {
+                            search.query = searchText
+                            search.timestamp = Date()
+                            realm.add(search, update: true)
+                        }
+                    } catch let error as NSError {
+                        SwiftyBeaver.debug(error.localizedDescription)
+                    }
+                    
+                    do {
+                        let realm = try Realm()
+                        try realm.write {
+                            realm.add(handler.movies, update: true)
+                        }
+                    } catch let error as NSError {
+                        SwiftyBeaver.debug(error.localizedDescription)
+                    }
+                    weakSelf.movies = handler.movies
                     DispatchQueue.main.async {
                         weakSelf.tableView.reloadData()
                     }
-                    return
-                }
-                do {
-                    let realm = try Realm()
-                    let search = Search()
-                    try realm .write {
-                        search.query = searchText
-                        search.timestamp = Date()
-                        realm.add(search, update: true)
+                }.catch { err in
+                    if let error: ServiceError = err as? ServiceError {
+                        SwiftyBeaver.error(error.localizedDescription)
                     }
-                } catch let error as NSError {
-                    SwiftyBeaver.debug(error.localizedDescription)
-                }
-
-                do {
-                    let realm = try Realm()
-                    try realm.write {
-                        realm.add(handler.movies, update: true)
-                    }
-                } catch let error as NSError {
-                    SwiftyBeaver.debug(error.localizedDescription)
-                }
-                weakSelf.movies = handler.movies
-                DispatchQueue.main.async {
-                    weakSelf.tableView.reloadData()
-                }
-            }.catch { err in
-                if let error: ServiceError = err as? ServiceError {
-                    SwiftyBeaver.error(error.localizedDescription)
-                }
+            }
+        }else {
+            
         }
+
     }
 }
