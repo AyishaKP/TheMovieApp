@@ -13,7 +13,7 @@ import Alamofire
 extension Movie {
     enum Router: Requestable {
         case search(_: String, page: Int)
-        static let imageUrl: String = "http://image.tmdb.org/t/p/w92/"
+        static let imageUrl: String = "http://image.tmdb.org/t/p/w780/"
         var path: String {
             switch self {
             case .search:

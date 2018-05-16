@@ -8,21 +8,24 @@
 
 import Foundation
 import ObjectMapper
+import RealmSwift
 
-class Movie: Mappable {
-    var movieId: String = ""
-    var title: String = ""
-    var originalTitle: String = ""
-    var posterPath: String = ""
-    var overview: String = ""
-    var voteCount = ""
-    var popularity: String = ""
-    var originalLanguage: String = ""
-    var releaseDate = Date()
-    var backdropPath: String = ""
+class Movie: Object, Mappable {
+    @objc dynamic var movieId: String = ""
+    @objc dynamic var title: String = ""
+    @objc dynamic var originalTitle: String = ""
+    @objc dynamic var posterPath: String = ""
+    @objc dynamic var overview: String = ""
+    @objc dynamic var voteCount = ""
+    @objc dynamic var popularity: String = ""
+    @objc dynamic var originalLanguage: String = ""
+    @objc dynamic var releaseDate: Date?
+    @objc dynamic var backdropPath: String = ""
 
-    required init?(map: Map) {
+    required convenience init?(map: Map) {
+        self.init()
     }
+
     func mapping(map: Map) {
         movieId <- map["id"]
         title <- map["title"]
@@ -34,5 +37,9 @@ class Movie: Mappable {
         originalLanguage <- map["original_language"]
         releaseDate <- (map["release_date"], DateTransform())
         backdropPath <- map["backdrop_path"]
+    }
+
+    override static func primaryKey() -> String? {
+        return "movieId"
     }
 }

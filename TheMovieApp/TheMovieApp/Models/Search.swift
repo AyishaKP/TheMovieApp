@@ -7,3 +7,13 @@
 //
 
 import Foundation
+import RealmSwift
+
+class Search: Object {
+    @objc dynamic var query: String?
+    @objc dynamic var timestamp: Date?
+
+    override static func primaryKey() -> String? {
+        return "query"
+    }
+}

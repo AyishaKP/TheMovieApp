@@ -16,13 +16,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions
                         launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        customizeAppearance()
         #if DEBUG
             SwiftyBeaver.addDestination(ConsoleDestination())
         #endif
 
         return true
     }
-
+    private func customizeAppearance() {
+        UINavigationBar.appearance().backgroundColor = UIColor.transparentBlack
+        UINavigationBar.appearance().barTintColor = UIColor.white
+        UINavigationBar.appearance().titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.black,
+            NSAttributedStringKey.font: UIFont.latoFont(.regular, size: 16)!]
+    }
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state.
         // This can occur for certain types of temporary interruptions (such as an incoming

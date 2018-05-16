@@ -16,6 +16,7 @@ target 'TheMovieApp' do
   pod 'AlamofireObjectMapper'
   pod 'SwiftyBeaver'
   pod 'SDWebImage', '~> 4.0'
+  pod 'EmptyDataSet-Swift'
 
   target 'TheMovieAppTests' do
     inherit! :search_paths

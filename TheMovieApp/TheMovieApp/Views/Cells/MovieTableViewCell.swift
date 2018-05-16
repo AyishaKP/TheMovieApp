@@ -22,7 +22,8 @@ class MovieTableViewCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        posterImageView.contentMode = .scaleAspectFit
+        posterImageView.contentMode = .scaleAspectFill
+        posterImageView.clipsToBounds = true
         posterImageView.backgroundColor = UIColor.transparentBlack
 
     }

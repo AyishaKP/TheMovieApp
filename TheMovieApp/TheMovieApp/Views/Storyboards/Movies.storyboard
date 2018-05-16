@@ -22,7 +22,7 @@
         <scene sceneID="n4T-Ur-Gj3">
             <objects>
                 <tableViewController storyboardIdentifier="MoviesTableViewControllerID" id="FSz-oD-Z7e" customClass="MoviesTableViewController" customModule="TheMovieApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="MeB-48-wjX">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="interactive" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="MeB-48-wjX">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -104,8 +104,19 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Root View Controller" id="ANG-iW-v7V"/>
+                    <connections>
+                        <outlet property="searchDisplayController" destination="xKa-nD-raR" id="BCU-of-MjN"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qw9-S4-aWX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="xKa-nD-raR">
+                    <connections>
+                        <outlet property="delegate" destination="FSz-oD-Z7e" id="aSF-lk-W55"/>
+                        <outlet property="searchContentsController" destination="FSz-oD-Z7e" id="Tfc-9v-UgS"/>
+                        <outlet property="searchResultsDataSource" destination="FSz-oD-Z7e" id="jnO-IG-bpB"/>
+                        <outlet property="searchResultsDelegate" destination="FSz-oD-Z7e" id="7c5-pB-DHz"/>
+                    </connections>
+                </searchDisplayController>
             </objects>
             <point key="canvasLocation" x="460" y="45.42728635682159"/>
         </scene>

@@ -8,9 +8,11 @@
 
 import ObjectMapper
 
-class DateTransform: FormatDateTransform {
+class DateTransform: DateFormatterTransform {
 
     public init() {
-        super.init(mask: "yyyy-MM-dd")
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        super.init(dateFormatter: dateFormatter)
     }
 }
