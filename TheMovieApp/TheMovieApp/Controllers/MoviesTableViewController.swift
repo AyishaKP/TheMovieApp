@@ -46,6 +46,8 @@ class MoviesTableViewController: UITableViewController {
     // MARK: - View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        definesPresentationContext = false
         setupTableView()
         customizeSearchBar()
 
@@ -66,7 +68,6 @@ class MoviesTableViewController: UITableViewController {
     // MARK: - UI Customizations
     private func setupTableView() {
         title = "M O V I E"
-        tableView.backgroundView = UIImageView(image: UIImage(named: "backgroundImage"))
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "searchResultCell")
         tableView.keyboardDismissMode = .interactive
     }
@@ -78,10 +79,10 @@ class MoviesTableViewController: UITableViewController {
             controller.dimsBackgroundDuringPresentation = false
             controller.searchBar.sizeToFit()
             controller.searchBar.searchBarStyle = .minimal
-            controller.searchBar.backgroundColor = UIColor.transparentBlack
             controller.searchBar.tintColor = UIColor.white
-            controller.searchBar.placeholder = "Search your movie"
+            controller.searchBar.placeholder = "Search for a movie"
             controller.searchBar.delegate = self
+            controller.searchBar.autoresizingMask = [.flexibleWidth, .flexibleHeight]
             tableView.tableHeaderView = controller.searchBar
             return controller
         }()
@@ -101,6 +102,8 @@ class MoviesTableViewController: UITableViewController {
                     guard handler.movies.count > 0 else {
                         weakSelf.movies.removeAll()
                         DispatchQueue.main.async {
+                            weakSelf.tableView.emptyDataSetSource = self
+                            weakSelf.tableView.emptyDataSetDelegate = self
                             weakSelf.tableView.reloadData()
                         }
                         return

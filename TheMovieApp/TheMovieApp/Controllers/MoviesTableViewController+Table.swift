@@ -13,14 +13,17 @@ extension MoviesTableViewController {
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
+        if searchController.isActive {
+            return 1
+        }
+        return movies.count
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if searchController.isActive {
             return searches?.count ?? 0
         }
-        return movies.count
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -28,17 +31,19 @@ extension MoviesTableViewController {
 
             let cell = tableView.dequeueReusableCell(withIdentifier:
                 "searchResultCell", for: indexPath)
+            cell.backgroundColor = UIColor.transparentBlack
+            cell.textLabel?.font = UIFont.latoFont(.medium, size: 14)
+            cell.textLabel?.textColor = UIColor.swanWhite
             if let search = searches?[indexPath.row] {
                 cell.textLabel?.text = search.query
             }
             return cell
-
         }
 
         guard let movieCell = tableView.dequeueReusableCell(withIdentifier: "movieListCellId",
                                                             for: indexPath) as? MovieTableViewCell
             else { fatalError("Must have a cell of type MovieTableViewCell") }
-        let movie = movies[indexPath.row]
+        let movie = movies[indexPath.section]
         let imageUrlPath = Movie.Router.imageUrl
         if let posterPath = movie.posterPath {
             let imageUrl = URL(string: imageUrlPath)?.appendingPathComponent(posterPath)
@@ -66,7 +71,8 @@ extension MoviesTableViewController {
         tableView.deselectRow(at: indexPath, animated: true)
         if searchController.isActive {
             if let searchItem = searches?[indexPath.row] {
-                fetchMovies(with: searchItem.query ?? "")
+                searchController.searchBar.text = searchItem.query
+//                fetchMovies(with: searchItem.query ?? "")
             }
         }
     }

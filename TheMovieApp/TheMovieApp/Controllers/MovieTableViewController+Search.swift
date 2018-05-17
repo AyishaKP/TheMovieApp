@@ -29,6 +29,13 @@ extension MoviesTableViewController: UISearchBarDelegate, UISearchResultsUpdatin
         fetchMovies(with: searchString)
     }
 
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        searchController.isActive = false
+        guard let realm = realm else { return }
+        movies = Array(realm.objects(Movie.self))
+        tableView.reloadData()
+    }
+
     // MARK: - UISearchResultsUpdating
 
     func updateSearchResults(for searchController: UISearchController) {
