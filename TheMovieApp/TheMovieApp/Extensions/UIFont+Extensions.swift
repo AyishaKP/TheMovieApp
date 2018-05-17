@@ -10,6 +10,7 @@ import UIKit
 
 extension UIFont {
 
+    //Used to provide Lato font to the Labels
     enum LatoFont: CustomStringConvertible {
         case light
         case regular
@@ -28,7 +29,9 @@ extension UIFont {
             return "Lato-" + fontName
         }
     }
-        class func latoFont(_ fontType: LatoFont, size: CGFloat) -> UIFont? {
-            return UIFont(name: fontType.description, size: size)
-        }
+
+    //Used to call Lato font method programmatically
+    class func latoFont(_ fontType: LatoFont, size: CGFloat) -> UIFont? {
+        return UIFont(name: fontType.description, size: size)
+    }
 }
