@@ -12,13 +12,17 @@ import EmptyDataSet_Swift
 extension MoviesTableViewController: EmptyDataSetSource, EmptyDataSetDelegate {
     // MARK: - EmptyDataSetSource
     func title(forEmptyDataSet scrollView: UIScrollView) -> NSAttributedString? {
-        return NSAttributedString(string: "Result not found")
+        return NSAttributedString(string: "Its empty around here!")
     }
     func description(forEmptyDataSet scrollView: UIScrollView) -> NSAttributedString? {
-        return NSAttributedString(string: "Please try again or choose any other Movie")
+        return NSAttributedString(string: "Please search for a movie")
     }
     func image(forEmptyDataSet scrollView: UIScrollView) -> UIImage? {
-        return UIImage(named: "emptyImage")
+        return UIImage(named: "ic_movie")
+    }
+    func buttonTitle(forEmptyDataSet scrollView: UIScrollView, for state: UIControlState) -> NSAttributedString? {
+        return NSAttributedString(string: "T A P  M E",
+                                  attributes: [NSAttributedStringKey.backgroundColor: UIColor.darkRed, NSAttributedStringKey.foregroundColor: UIColor.swanWhite])
     }
     // MARK: - EmptyDataSetDelegate Methods
     func emptyDataSetShouldDisplay(_ scrollView: UIScrollView) -> Bool {
@@ -29,5 +33,10 @@ extension MoviesTableViewController: EmptyDataSetSource, EmptyDataSetDelegate {
     }
     func emptyDataSetShouldAllowScroll(_ scrollView: UIScrollView) -> Bool {
         return true
+    }
+    func emptyDataSet(_ scrollView: UIScrollView, didTapButton button: UIButton) {
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 3) {
+
+        }
     }
 }
