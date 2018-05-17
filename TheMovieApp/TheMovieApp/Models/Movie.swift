@@ -11,16 +11,16 @@ import ObjectMapper
 import RealmSwift
 
 class Movie: Object, Mappable {
-    @objc dynamic var movieId: String = ""
-    @objc dynamic var title: String = ""
-    @objc dynamic var originalTitle: String = ""
-    @objc dynamic var posterPath: String = ""
-    @objc dynamic var overview: String = ""
-    @objc dynamic var voteCount = ""
-    @objc dynamic var popularity: String = ""
-    @objc dynamic var originalLanguage: String = ""
+    @objc dynamic var movieId: Int = 0
+    @objc dynamic var title: String?
+    @objc dynamic var originalTitle: String?
+    @objc dynamic var posterPath: String?
+    @objc dynamic var overview: String?
+    @objc dynamic var voteCount: String?
+    @objc dynamic var popularity: String?
+    @objc dynamic var originalLanguage: String?
     @objc dynamic var releaseDate: Date?
-    @objc dynamic var backdropPath: String = ""
+    @objc dynamic var backdropPath: String?
 
     required convenience init?(map: Map) {
         self.init()
@@ -35,7 +35,7 @@ class Movie: Object, Mappable {
         voteCount <- map["vote_count"]
         popularity <- map["popularity"]
         originalLanguage <- map["original_language"]
-        releaseDate <- (map["release_date"], DateTransform())
+        releaseDate <- (map["release_date"], DateTransform(dateFormat: "yyyy-MM-dd"))
         backdropPath <- map["backdrop_path"]
     }
 

@@ -10,9 +10,13 @@ import ObjectMapper
 
 class DateTransform: DateFormatterTransform {
 
-    public init() {
+    // Used to make a date string to swift date transformation
+    // while parsing a date string in json response.
+    // Parameter dateFormat needs to be passed to the initializer
+    // to support any date format that can be received from backend.
+    public init(dateFormat: String) {
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy-MM-dd"
+        dateFormatter.dateFormat = dateFormat
         super.init(dateFormatter: dateFormatter)
     }
 }
