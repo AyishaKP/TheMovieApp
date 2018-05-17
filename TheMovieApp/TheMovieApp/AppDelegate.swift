@@ -16,7 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions
                         launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-       
+
         NetworkManager.shared.startNetworkReachabilityObserver()
         customizeAppearance()
         #if DEBUG
@@ -27,9 +27,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     private func customizeAppearance() {
         UINavigationBar.appearance().backgroundColor = UIColor.transparentBlack
-        UINavigationBar.appearance().barTintColor = UIColor.white
-        UINavigationBar.appearance().titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.black,
-            NSAttributedStringKey.font: UIFont.latoFont(.regular, size: 16)!]
+        UINavigationBar.appearance().barTintColor = UIColor.black
+        UINavigationBar.appearance().titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white,
+            NSAttributedStringKey.font: UIFont.latoFont(.bold, size: 16)!]
+        UITextField.appearance().keyboardAppearance = .dark
+        UITextField.appearance(whenContainedInInstancesOf: [UISearchBar.self]).defaultTextAttributes = [NSAttributedStringKey.foregroundColor.rawValue: UIColor.white]
+
     }
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state.
