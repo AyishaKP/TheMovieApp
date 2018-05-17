@@ -15,8 +15,10 @@ extension MoviesTableViewController: UISearchBarDelegate, UISearchResultsUpdatin
     // MARK: - UISearchBarDelegate
 
     func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
+        searchController.isActive = true
         tableView.reloadData()
     }
+
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
 
         guard let searchString = searchController.searchBar.text, searchString.count > 0 else {

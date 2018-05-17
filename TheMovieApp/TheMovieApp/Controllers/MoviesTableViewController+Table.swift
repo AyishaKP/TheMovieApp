@@ -19,13 +19,13 @@ extension MoviesTableViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if searchController.isActive {
             return searches?.count ?? 0
-        } else {
-            return movies.count
         }
+        return movies.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if searchController.isActive {
+
             let cell = tableView.dequeueReusableCell(withIdentifier:
                 "searchResultCell", for: indexPath)
             if let search = searches?[indexPath.row] {
@@ -38,18 +38,23 @@ extension MoviesTableViewController {
         guard let movieCell = tableView.dequeueReusableCell(withIdentifier: "movieListCellId",
                                                             for: indexPath) as? MovieTableViewCell
             else { fatalError("Must have a cell of type MovieTableViewCell") }
-        let movieResult = movies[indexPath.row]
+        let movie = movies[indexPath.row]
         let imageUrlPath = Movie.Router.imageUrl
-        let imageUrl = URL(string: imageUrlPath)?.appendingPathComponent(movieResult.posterPath)
-        movieCell.posterImageView.sd_setImage(with: imageUrl, placeholderImage:
-            UIImage(named: "ic_poster_placeholder"), options: .highPriority, completed: nil)
-        movieCell.titleNameLabel.text = movieResult.title
-        if let releaseDate = movieResult.releaseDate {
+        if let posterPath = movie.posterPath {
+            let imageUrl = URL(string: imageUrlPath)?.appendingPathComponent(posterPath)
+            movieCell.posterImageView.sd_setImage(with: imageUrl,
+                                                  placeholderImage: UIImage(named: "ic_poster_placeholder"),
+                                                  options: .highPriority,
+                                                  completed: nil)
+        }
+
+        movieCell.titleNameLabel.text = movie.title
+        if let releaseDate = movie.releaseDate {
             let releaseDateString = dateFormatter.string(from: releaseDate)
             movieCell.releaseDateLabel.text = "Release Date: \(releaseDateString)"
         }
 
-        movieCell.overViewLabel.text = "OverView: \(movieResult.overview)"
+        movieCell.overViewLabel.text = "OverView: \(movie.overview ?? "")"
         movieCell.contentView.layer.borderColor = UIColor.swanWhite.cgColor
         movieCell.contentView.layer.borderWidth = 1
         return movieCell

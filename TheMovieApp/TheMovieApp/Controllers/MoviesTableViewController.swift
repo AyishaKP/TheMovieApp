@@ -30,15 +30,16 @@ class MoviesTableViewController: UITableViewController {
             return nil
         }
     }
-    var searches: [Search]? {
+    private var searchHistory: [Search]? {
         guard let realm = realm else { return nil }
         let fetchedHistory = Array(realm.objects(Search.self).sorted(byKeyPath: "timestamp"))
         var searchHistory: [Search] = []
-        for index in 0...9 where index <= fetchedHistory.count - 1 {
-            searchHistory.append(fetchedHistory[index])
+        for (index, value) in fetchedHistory.enumerated() where index < 10 {
+            searchHistory.append(value)
         }
         return searchHistory
     }
+    var searches: [Search]?
     var movies: [Movie] = []
     private var page: Int = 0
 
@@ -50,6 +51,11 @@ class MoviesTableViewController: UITableViewController {
 
         guard let realm = realm else { return }
         movies = Array(realm.objects(Movie.self))
+        searches = searchHistory
+        if movies.count == 0 {
+            tableView.emptyDataSetSource = self
+            tableView.emptyDataSetDelegate = self
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -59,10 +65,10 @@ class MoviesTableViewController: UITableViewController {
 
     // MARK: - UI Customizations
     private func setupTableView() {
+        title = "M O V I E"
         tableView.backgroundView = UIImageView(image: UIImage(named: "backgroundImage"))
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "searchResultCell")
-        tableView.emptyDataSetSource = self
-        tableView.emptyDataSetDelegate = self
+        tableView.keyboardDismissMode = .interactive
     }
 
     private func customizeSearchBar() {
@@ -71,6 +77,10 @@ class MoviesTableViewController: UITableViewController {
             controller.searchResultsUpdater = self
             controller.dimsBackgroundDuringPresentation = false
             controller.searchBar.sizeToFit()
+            controller.searchBar.searchBarStyle = .minimal
+            controller.searchBar.backgroundColor = UIColor.transparentBlack
+            controller.searchBar.tintColor = UIColor.white
+            controller.searchBar.placeholder = "Search your movie"
             controller.searchBar.delegate = self
             tableView.tableHeaderView = controller.searchBar
             return controller
@@ -85,9 +95,9 @@ class MoviesTableViewController: UITableViewController {
             firstly { () -> Promise<SearchHandler> in
                 Movie.Router.search(searchText, page: page + 1).createRequest()
                 }.then { [weak self] (handler: SearchHandler) -> Void in
-                    
+
                     guard let weakSelf = self else { return }
-                    
+
                     guard handler.movies.count > 0 else {
                         weakSelf.movies.removeAll()
                         DispatchQueue.main.async {
@@ -103,10 +113,11 @@ class MoviesTableViewController: UITableViewController {
                             search.timestamp = Date()
                             realm.add(search, update: true)
                         }
+                        weakSelf.searches = weakSelf.searchHistory
                     } catch let error as NSError {
                         SwiftyBeaver.debug(error.localizedDescription)
                     }
-                    
+
                     do {
                         let realm = try Realm()
                         try realm.write {
@@ -124,8 +135,8 @@ class MoviesTableViewController: UITableViewController {
                         SwiftyBeaver.error(error.localizedDescription)
                     }
             }
-        }else {
-            
+        } else {
+
         }
 
     }
