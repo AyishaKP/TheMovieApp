@@ -10,8 +10,8 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="AvenirNext.ttc">
-            <string>AvenirNext-BoldItalic</string>
+        <array key="Lato-Bold.ttf">
+            <string>Lato-Bold</string>
         </array>
     </customFonts>
     <scenes>
@@ -23,12 +23,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="movie_theater" translatesAutoresizingMaskIntoConstraints="NO" id="1gN-vt-Ved">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="splash" translatesAutoresizingMaskIntoConstraints="NO" id="1gN-vt-Ved">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WELCOME TO CAREEM MOVIE APP" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tJN-7C-hsB">
-                                <rect key="frame" x="60.5" y="625.5" width="254" height="21.5"/>
-                                <fontDescription key="fontDescription" name="AvenirNext-BoldItalic" family="Avenir Next" pointSize="15"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WELCOME TO THE MOVIE APP" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tJN-7C-hsB">
+                                <rect key="frame" x="71.5" y="384" width="232.5" height="20.5"/>
+                                <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="16"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                                 <color key="shadowColor" red="0.28235294119999998" green="0.28235294119999998" blue="0.28235294119999998" alpha="1" colorSpace="calibratedRGB"/>
@@ -36,10 +36,10 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="1gN-vt-Ved" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="0jy-Ya-i25"/>
+                            <constraint firstItem="1gN-vt-Ved" firstAttribute="bottom" secondItem="Ze5-6b-2t3" secondAttribute="bottom" id="0jy-Ya-i25"/>
+                            <constraint firstItem="tJN-7C-hsB" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" constant="50" id="7wa-Ty-r6o"/>
                             <constraint firstItem="1gN-vt-Ved" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="HTP-Bk-Eu1"/>
                             <constraint firstItem="tJN-7C-hsB" firstAttribute="centerX" secondItem="1gN-vt-Ved" secondAttribute="centerX" id="RwX-4G-s3H"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="tJN-7C-hsB" secondAttribute="bottom" constant="20" id="U94-eX-Mfo"/>
                             <constraint firstItem="1gN-vt-Ved" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="bG8-Dd-tzg"/>
                             <constraint firstItem="1gN-vt-Ved" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="pct-nl-0cd"/>
                         </constraints>
@@ -52,6 +52,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="movie_theater" width="320" height="341"/>
+        <image name="splash" width="250" height="444"/>
     </resources>
 </document>

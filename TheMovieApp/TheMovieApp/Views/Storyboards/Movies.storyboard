@@ -22,26 +22,26 @@
         <scene sceneID="n4T-Ur-Gj3">
             <objects>
                 <tableViewController storyboardIdentifier="MoviesTableViewControllerID" id="FSz-oD-Z7e" customClass="MoviesTableViewController" customModule="TheMovieApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="interactive" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="MeB-48-wjX">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="interactive" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="MeB-48-wjX">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.15602773427963257" green="0.18347781896591187" blue="0.23427727818489075" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="movieListCellId" rowHeight="183" id="DHN-4B-MTB" customClass="MovieTableViewCell" customModule="TheMovieApp" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="375" height="183"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="movieListCellId" rowHeight="300" id="DHN-4B-MTB" customClass="MovieTableViewCell" customModule="TheMovieApp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="55.5" width="375" height="300"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="DHN-4B-MTB" id="7X1-f8-Df5">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="183"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="300"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_poster_placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="5Lp-ll-GeH">
+                                            <rect key="frame" x="0.0" y="-0.5" width="375" height="250"/>
+                                        </imageView>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HcQ-20-EoD">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="130"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="250"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_poster_placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="5Lp-ll-GeH">
-                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="130"/>
-                                                </imageView>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="mZU-O0-BDk">
-                                                    <rect key="frame" x="15" y="71" width="345" height="44"/>
+                                                    <rect key="frame" x="15" y="191" width="345" height="44"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Movie Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dXz-h8-cfj">
                                                             <rect key="frame" x="0.0" y="0.0" width="345" height="19.5"/>
@@ -60,35 +60,34 @@
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="130" id="246-hg-V3u"/>
-                                                <constraint firstAttribute="trailing" secondItem="5Lp-ll-GeH" secondAttribute="trailing" id="9gT-Ap-D7X"/>
+                                                <constraint firstAttribute="height" constant="250" id="246-hg-V3u"/>
                                                 <constraint firstAttribute="bottom" secondItem="mZU-O0-BDk" secondAttribute="bottom" constant="15" id="E7F-y5-oy5"/>
-                                                <constraint firstAttribute="bottom" secondItem="5Lp-ll-GeH" secondAttribute="bottom" id="N9c-IX-ixO"/>
-                                                <constraint firstItem="5Lp-ll-GeH" firstAttribute="leading" secondItem="HcQ-20-EoD" secondAttribute="leading" id="dTN-9d-Kjq"/>
                                                 <constraint firstItem="mZU-O0-BDk" firstAttribute="width" secondItem="HcQ-20-EoD" secondAttribute="width" multiplier="345:375" id="nWk-k9-SD5"/>
                                                 <constraint firstItem="mZU-O0-BDk" firstAttribute="leading" secondItem="HcQ-20-EoD" secondAttribute="leading" constant="15" id="sI6-45-x9s"/>
-                                                <constraint firstItem="5Lp-ll-GeH" firstAttribute="top" secondItem="HcQ-20-EoD" secondAttribute="top" id="td4-c9-Zeq"/>
                                             </constraints>
                                         </view>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Overview" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A2a-nS-Y0C">
-                                            <rect key="frame" x="15" y="145" width="345" height="22.5"/>
+                                            <rect key="frame" x="15" y="265" width="345" height="20"/>
                                             <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="12"/>
-                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     <constraints>
+                                        <constraint firstItem="5Lp-ll-GeH" firstAttribute="trailing" secondItem="HcQ-20-EoD" secondAttribute="trailing" id="1gO-Fq-ZPg"/>
                                         <constraint firstAttribute="trailing" secondItem="A2a-nS-Y0C" secondAttribute="trailing" constant="15" id="3gF-iK-tiG"/>
                                         <constraint firstAttribute="trailing" secondItem="HcQ-20-EoD" secondAttribute="trailing" id="D24-4Y-G8s"/>
                                         <constraint firstItem="A2a-nS-Y0C" firstAttribute="leading" secondItem="7X1-f8-Df5" secondAttribute="leading" constant="15" id="F7l-X6-yAP"/>
+                                        <constraint firstItem="5Lp-ll-GeH" firstAttribute="leading" secondItem="HcQ-20-EoD" secondAttribute="leading" id="P6X-Cm-zVQ"/>
+                                        <constraint firstItem="5Lp-ll-GeH" firstAttribute="bottom" secondItem="HcQ-20-EoD" secondAttribute="bottom" id="Xwq-WJ-wd7"/>
                                         <constraint firstItem="HcQ-20-EoD" firstAttribute="top" secondItem="7X1-f8-Df5" secondAttribute="top" id="aEi-bQ-mHU"/>
                                         <constraint firstAttribute="bottom" secondItem="A2a-nS-Y0C" secondAttribute="bottom" constant="15" id="m1d-WY-Qj9"/>
+                                        <constraint firstItem="5Lp-ll-GeH" firstAttribute="top" secondItem="HcQ-20-EoD" secondAttribute="top" id="mBJ-sZ-9dm"/>
                                         <constraint firstItem="A2a-nS-Y0C" firstAttribute="top" secondItem="HcQ-20-EoD" secondAttribute="bottom" constant="15" id="oIv-au-iB0"/>
                                         <constraint firstItem="HcQ-20-EoD" firstAttribute="leading" secondItem="7X1-f8-Df5" secondAttribute="leading" id="vEb-Uf-ebB"/>
                                     </constraints>
                                 </tableViewCellContentView>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="overViewLabel" destination="A2a-nS-Y0C" id="gQC-Rn-KSO"/>
                                     <outlet property="posterContainerView" destination="HcQ-20-EoD" id="vvc-9t-a3A"/>

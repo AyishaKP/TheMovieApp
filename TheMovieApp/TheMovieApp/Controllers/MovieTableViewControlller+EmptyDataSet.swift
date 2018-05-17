@@ -22,7 +22,8 @@ extension MoviesTableViewController: EmptyDataSetSource, EmptyDataSetDelegate {
     }
     func buttonTitle(forEmptyDataSet scrollView: UIScrollView, for state: UIControlState) -> NSAttributedString? {
         return NSAttributedString(string: "T A P  M E",
-                                  attributes: [NSAttributedStringKey.backgroundColor: UIColor.darkRed, NSAttributedStringKey.foregroundColor: UIColor.swanWhite])
+                                  attributes: [NSAttributedStringKey.backgroundColor: UIColor.darkRed,
+                                               NSAttributedStringKey.foregroundColor: UIColor.swanWhite])
     }
     // MARK: - EmptyDataSetDelegate Methods
     func emptyDataSetShouldDisplay(_ scrollView: UIScrollView) -> Bool {
@@ -35,8 +36,7 @@ extension MoviesTableViewController: EmptyDataSetSource, EmptyDataSetDelegate {
         return true
     }
     func emptyDataSet(_ scrollView: UIScrollView, didTapButton button: UIButton) {
-        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 3) {
-
-        }
+        searchController.isActive = true
+        tableView.reloadData()
     }
 }
