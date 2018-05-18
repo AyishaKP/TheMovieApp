@@ -37,6 +37,7 @@ extension MoviesTableViewController: EmptyDataSetSource, EmptyDataSetDelegate {
     }
     func emptyDataSet(_ scrollView: UIScrollView, didTapButton button: UIButton) {
         searchController.isActive = true
+        searchController.searchBar.becomeFirstResponder()
         tableView.reloadData()
     }
 }

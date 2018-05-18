@@ -32,12 +32,14 @@
 		5A18616420AB711900BAED0B /* Lato-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5A18615020AB711900BAED0B /* Lato-Regular.ttf */; };
 		5A18616920AB711900BAED0B /* OFL.txt in Resources */ = {isa = PBXBuildFile; fileRef = 5A18615520AB711900BAED0B /* OFL.txt */; };
 		5A18616A20AB711900BAED0B /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = 5A18615620AB711900BAED0B /* README.txt */; };
+		5A1B661920AEBF8E00B5D800 /* MoviesTableViewController+WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1B661820AEBF8E00B5D800 /* MoviesTableViewController+WebService.swift */; };
 		5AEA3E6B20AB8FAE00AA44C9 /* DateTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AEA3E6A20AB8FAE00AA44C9 /* DateTransform.swift */; };
 		5AEA3E7420AC632900AA44C9 /* MovieTableViewControlller+EmptyDataSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AEA3E7320AC632900AA44C9 /* MovieTableViewControlller+EmptyDataSet.swift */; };
 		5AEA3E7620AC8B2C00AA44C9 /* MovieTableViewController+Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AEA3E7520AC8B2C00AA44C9 /* MovieTableViewController+Search.swift */; };
 		5AEA3E7820AC987300AA44C9 /* MoviesTableViewController+Table.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AEA3E7720AC987300AA44C9 /* MoviesTableViewController+Table.swift */; };
 		5AEA3E7A20ACA6FC00AA44C9 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AEA3E7920ACA6FC00AA44C9 /* NetworkManager.swift */; };
 		5AEA3E7C20ACAB8000AA44C9 /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AEA3E7B20ACAB8000AA44C9 /* UIViewController+Extensions.swift */; };
+		5AEA3E7E20AE222300AA44C9 /* MovieTableViewController+Pagination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AEA3E7D20AE222300AA44C9 /* MovieTableViewController+Pagination.swift */; };
 		850C6A899FA2CA17F97CD1A2 /* Pods_TheMovieApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9202A0B14196C81A82C70E48 /* Pods_TheMovieApp.framework */; };
 		D63A457BEFFFB48D6DCA906A /* Pods_TheMovieAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9ABB6175BB395A324242758E /* Pods_TheMovieAppUITests.framework */; };
 		DAE7BD2A947C5A35F5E5157D /* Pods_TheMovieAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C519D952FC0B8A9586135F73 /* Pods_TheMovieAppTests.framework */; };
@@ -94,12 +96,14 @@
 		5A18615020AB711900BAED0B /* Lato-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Regular.ttf"; sourceTree = "<group>"; };
 		5A18615520AB711900BAED0B /* OFL.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = OFL.txt; sourceTree = "<group>"; };
 		5A18615620AB711900BAED0B /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
+		5A1B661820AEBF8E00B5D800 /* MoviesTableViewController+WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MoviesTableViewController+WebService.swift"; sourceTree = "<group>"; };
 		5AEA3E6A20AB8FAE00AA44C9 /* DateTransform.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateTransform.swift; sourceTree = "<group>"; };
 		5AEA3E7320AC632900AA44C9 /* MovieTableViewControlller+EmptyDataSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MovieTableViewControlller+EmptyDataSet.swift"; sourceTree = "<group>"; };
 		5AEA3E7520AC8B2C00AA44C9 /* MovieTableViewController+Search.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MovieTableViewController+Search.swift"; sourceTree = "<group>"; };
 		5AEA3E7720AC987300AA44C9 /* MoviesTableViewController+Table.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MoviesTableViewController+Table.swift"; sourceTree = "<group>"; };
 		5AEA3E7920ACA6FC00AA44C9 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		5AEA3E7B20ACAB8000AA44C9 /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
+		5AEA3E7D20AE222300AA44C9 /* MovieTableViewController+Pagination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MovieTableViewController+Pagination.swift"; sourceTree = "<group>"; };
 		5CEAB7E0BAB831D7F178216D /* Pods-TheMovieAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TheMovieAppTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TheMovieAppTests/Pods-TheMovieAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		8FADFD29A8D1813E7E3E2AA7 /* Pods-TheMovieAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TheMovieAppUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TheMovieAppUITests/Pods-TheMovieAppUITests.release.xcconfig"; sourceTree = "<group>"; };
 		9202A0B14196C81A82C70E48 /* Pods_TheMovieApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TheMovieApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -210,6 +214,8 @@
 				5AEA3E7720AC987300AA44C9 /* MoviesTableViewController+Table.swift */,
 				5AEA3E7320AC632900AA44C9 /* MovieTableViewControlller+EmptyDataSet.swift */,
 				5AEA3E7520AC8B2C00AA44C9 /* MovieTableViewController+Search.swift */,
+				5AEA3E7D20AE222300AA44C9 /* MovieTableViewController+Pagination.swift */,
+				5A1B661820AEBF8E00B5D800 /* MoviesTableViewController+WebService.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -632,10 +638,12 @@
 				5A13800120A9DC0B00F3C789 /* MovieTableViewCell.swift in Sources */,
 				5A137FF820A9DAFD00F3C789 /* Search.swift in Sources */,
 				5A137FF620A9C86C00F3C789 /* Requestable+PromiseAPI.swift in Sources */,
+				5A1B661920AEBF8E00B5D800 /* MoviesTableViewController+WebService.swift in Sources */,
 				5AEA3E7420AC632900AA44C9 /* MovieTableViewControlller+EmptyDataSet.swift in Sources */,
 				5A137FFA20A9DB1700F3C789 /* Movie.swift in Sources */,
 				5AEA3E7C20ACAB8000AA44C9 /* UIViewController+Extensions.swift in Sources */,
 				5A137FF420A9C84900F3C789 /* Request+Debug.swift in Sources */,
+				5AEA3E7E20AE222300AA44C9 /* MovieTableViewController+Pagination.swift in Sources */,
 				5AEA3E7820AC987300AA44C9 /* MoviesTableViewController+Table.swift in Sources */,
 				5A137FF020A9C6F600F3C789 /* Requestable.swift in Sources */,
 				5A137FA820A9A04A00F3C789 /* AppDelegate.swift in Sources */,

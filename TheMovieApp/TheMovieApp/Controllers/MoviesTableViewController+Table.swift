@@ -16,6 +16,9 @@ extension MoviesTableViewController {
         if searchController.isActive {
             return 1
         }
+        if isLoading {
+            return movies.count + 1
+        }
         return movies.count
     }
 
@@ -27,7 +30,17 @@ extension MoviesTableViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if searchController.isActive {
+
+        if !searchController.isActive && isLoading && indexPath.section == movies.count {
+            let loadCell = tableView.dequeueReusableCell(withIdentifier:
+                "loadMoreCell", for: indexPath)
+            loadCell.textLabel?.text = "Loading..."
+            loadCell.textLabel?.textAlignment = .center
+            loadCell.backgroundColor = UIColor.transparentBlack
+            loadCell.textLabel?.font = UIFont.latoFont(.medium, size: 14)
+            loadCell.textLabel?.textColor = UIColor.swanWhite
+            return loadCell
+        } else if searchController.isActive {
 
             let cell = tableView.dequeueReusableCell(withIdentifier:
                 "searchResultCell", for: indexPath)
@@ -67,12 +80,20 @@ extension MoviesTableViewController {
 
     // MARK: - Table view delegates
 
+    override func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 350
+    }
+
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableViewAutomaticDimension
+    }
+
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         if searchController.isActive {
             if let searchItem = searches?[indexPath.row] {
                 searchController.searchBar.text = searchItem.query
-//                fetchMovies(with: searchItem.query ?? "")
+                searchController.searchBar.becomeFirstResponder()
             }
         }
     }

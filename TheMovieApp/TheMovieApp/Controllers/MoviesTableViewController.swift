@@ -7,8 +7,6 @@
 //
 
 import UIKit
-import PromiseKit
-import SwiftyBeaver
 import SDWebImage
 import RealmSwift
 import EmptyDataSet_Swift
@@ -25,12 +23,11 @@ class MoviesTableViewController: UITableViewController {
     var realm: Realm? {
         do {
             return try Realm()
-        } catch let error as NSError {
-            SwiftyBeaver.debug(error.localizedDescription)
+        } catch {
             return nil
         }
     }
-    private var searchHistory: [Search]? {
+     var searchHistory: [Search]? {
         guard let realm = realm else { return nil }
         let fetchedHistory = Array(realm.objects(Search.self).sorted(byKeyPath: "timestamp"))
         var searchHistory: [Search] = []
@@ -41,18 +38,21 @@ class MoviesTableViewController: UITableViewController {
     }
     var searches: [Search]?
     var movies: [Movie] = []
-    private var page: Int = 0
+    var page: Int = 0
+    var isLoading: Bool = false
+    var currentSearch: Search?
 
     // MARK: - View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        definesPresentationContext = false
-        setupTableView()
+        customizeTableView()
         customizeSearchBar()
 
-        guard let realm = realm else { return }
-        movies = Array(realm.objects(Movie.self))
+        /* Load stored movies by uncommenting the below lines */
+        // guard let realm = realm else { return }
+        // movies = Array(realm.objects(Movie.self))
+
         searches = searchHistory
         if movies.count == 0 {
             tableView.emptyDataSetSource = self
@@ -66,9 +66,10 @@ class MoviesTableViewController: UITableViewController {
     }
 
     // MARK: - UI Customizations
-    private func setupTableView() {
+    private func customizeTableView() {
         title = "M O V I E"
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "searchResultCell")
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "loadMoreCell")
         tableView.keyboardDismissMode = .interactive
     }
 
@@ -88,59 +89,4 @@ class MoviesTableViewController: UITableViewController {
         }()
     }
 
-    // MARK: - Search API Handling
-
-    func fetchMovies(with searchText: String) {
-        searchController.dismiss(animated: true, completion: nil)
-        if NetworkManager.shared.isReachable {
-            firstly { () -> Promise<SearchHandler> in
-                Movie.Router.search(searchText, page: page + 1).createRequest()
-                }.then { [weak self] (handler: SearchHandler) -> Void in
-
-                    guard let weakSelf = self else { return }
-
-                    guard handler.movies.count > 0 else {
-                        weakSelf.movies.removeAll()
-                        DispatchQueue.main.async {
-                            weakSelf.tableView.emptyDataSetSource = self
-                            weakSelf.tableView.emptyDataSetDelegate = self
-                            weakSelf.tableView.reloadData()
-                        }
-                        return
-                    }
-                    do {
-                        let realm = try Realm()
-                        let search = Search()
-                        try realm .write {
-                            search.query = searchText
-                            search.timestamp = Date()
-                            realm.add(search, update: true)
-                        }
-                        weakSelf.searches = weakSelf.searchHistory
-                    } catch let error as NSError {
-                        SwiftyBeaver.debug(error.localizedDescription)
-                    }
-
-                    do {
-                        let realm = try Realm()
-                        try realm.write {
-                            realm.add(handler.movies, update: true)
-                        }
-                    } catch let error as NSError {
-                        SwiftyBeaver.debug(error.localizedDescription)
-                    }
-                    weakSelf.movies = handler.movies
-                    DispatchQueue.main.async {
-                        weakSelf.tableView.reloadData()
-                    }
-                }.catch { err in
-                    if let error: ServiceError = err as? ServiceError {
-                        SwiftyBeaver.error(error.localizedDescription)
-                    }
-            }
-        } else {
-
-        }
-
-    }
 }
