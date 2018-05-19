@@ -34,6 +34,7 @@
 		5A18616A20AB711900BAED0B /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = 5A18615620AB711900BAED0B /* README.txt */; };
 		5A1B661920AEBF8E00B5D800 /* MoviesTableViewController+WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1B661820AEBF8E00B5D800 /* MoviesTableViewController+WebService.swift */; };
 		5A1B661B20AFFECF00B5D800 /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1B661A20AFFECF00B5D800 /* RealmManager.swift */; };
+		5ACB24E520B0978400F73189 /* Request+XML.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ACB24E420B0978400F73189 /* Request+XML.swift */; };
 		5AEA3E6B20AB8FAE00AA44C9 /* DateTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AEA3E6A20AB8FAE00AA44C9 /* DateTransform.swift */; };
 		5AEA3E7420AC632900AA44C9 /* MovieTableViewControlller+EmptyDataSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AEA3E7320AC632900AA44C9 /* MovieTableViewControlller+EmptyDataSet.swift */; };
 		5AEA3E7620AC8B2C00AA44C9 /* MovieTableViewController+Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AEA3E7520AC8B2C00AA44C9 /* MovieTableViewController+Search.swift */; };
@@ -99,6 +100,7 @@
 		5A18615620AB711900BAED0B /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
 		5A1B661820AEBF8E00B5D800 /* MoviesTableViewController+WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MoviesTableViewController+WebService.swift"; sourceTree = "<group>"; };
 		5A1B661A20AFFECF00B5D800 /* RealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
+		5ACB24E420B0978400F73189 /* Request+XML.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Request+XML.swift"; sourceTree = "<group>"; };
 		5AEA3E6A20AB8FAE00AA44C9 /* DateTransform.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateTransform.swift; sourceTree = "<group>"; };
 		5AEA3E7320AC632900AA44C9 /* MovieTableViewControlller+EmptyDataSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MovieTableViewControlller+EmptyDataSet.swift"; sourceTree = "<group>"; };
 		5AEA3E7520AC8B2C00AA44C9 /* MovieTableViewController+Search.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MovieTableViewController+Search.swift"; sourceTree = "<group>"; };
@@ -250,6 +252,7 @@
 				5A137FF120A9C83300F3C789 /* Requestable+AlamofireObjectMapper.swift */,
 				5A137FF520A9C86C00F3C789 /* Requestable+PromiseAPI.swift */,
 				5A137FF320A9C84900F3C789 /* Request+Debug.swift */,
+				5ACB24E420B0978400F73189 /* Request+XML.swift */,
 			);
 			path = ServiceManager;
 			sourceTree = "<group>";
@@ -655,6 +658,7 @@
 				5A137FFC20A9DB5B00F3C789 /* MoviesTableViewController.swift in Sources */,
 				5A13800C20A9DDAC00F3C789 /* UIFont+Extensions.swift in Sources */,
 				5AEA3E6B20AB8FAE00AA44C9 /* DateTransform.swift in Sources */,
+				5ACB24E520B0978400F73189 /* Request+XML.swift in Sources */,
 				5A18613220AA98FA00BAED0B /* Movie+Router.swift in Sources */,
 				5AEA3E7620AC8B2C00AA44C9 /* MovieTableViewController+Search.swift in Sources */,
 				5A137FF220A9C83300F3C789 /* Requestable+AlamofireObjectMapper.swift in Sources */,

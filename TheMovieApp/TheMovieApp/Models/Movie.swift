@@ -48,7 +48,7 @@ class Movie: Object, Mappable {
         releaseDate <- (map["release_date"], DateTransform(dateFormat: "yyyy-MM-dd"))
         backdropPath <- map["backdrop_path"]
     }
-
+    // Used primary key to make the searches unique.
     override static func primaryKey() -> String? {
         return "movieId"
     }

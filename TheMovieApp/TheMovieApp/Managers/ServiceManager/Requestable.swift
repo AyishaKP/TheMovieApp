@@ -10,6 +10,7 @@ import Foundation
 import Alamofire
 import ObjectMapper
 
+// Protocol used to create a URL request and call a webservice.
 protocol Requestable: URLRequestConvertible {
     var method: Alamofire.HTTPMethod { get }
     var `protocol`: String { get }
@@ -21,8 +22,26 @@ protocol Requestable: URLRequestConvertible {
     var parameters: Parameters? { get }
     var encoding: ParameterEncoding { get }
 
-    @discardableResult func call<T: BaseMappable>
-        (with responseObject:@escaping (DataResponse<T>) -> Void) -> DataRequest
-    @discardableResult func call<T: BaseMappable>
-        (with responseArray:@escaping (DataResponse<[T]>) -> Void) -> DataRequest
+    // Implement this method to call to initiate alamofire request
+    // and get the response as a single base mappable model
+    // that is expected from a json response.
+    @discardableResult func requestJSON<T: BaseMappable>
+        (with objectCompletion:@escaping (DataResponse<T>) -> Void) -> DataRequest
+
+    // Implement this method to call to initiate alamofire request
+    // and get the response in an array of base mappable model
+    // that is expected from a json response.
+    @discardableResult func requestJSON<T: BaseMappable>
+        (with arrayCompletion:@escaping (DataResponse<[T]>) -> Void) -> DataRequest
+    
+    // Implement this method to call to initiate alamofire request
+    // and get the response as a single base mappable model
+    // that is expected from a xml response object.
+    @discardableResult func requestXML<T:BaseMappable> (with objectCompletion: @escaping (DataResponse<T>) -> Void) -> DataRequest
+    
+    // Implement this method to call to initiate alamofire request
+    // and get the response in an array of base mappable model
+    // that is expected from an array of xml response objects.
+    @discardableResult func requestXML<T: BaseMappable>
+        (with arrayCompletion:@escaping (DataResponse<[T]>) -> Void) -> DataRequest
 }

@@ -64,7 +64,7 @@ extension MoviesTableViewController {
                 weakSelf.page += 1
                 RealmManager.shared.save(searchText) { (search) in
                     weakSelf.currentSearch = search
-                    weakSelf.searches = weakSelf.searchHistory
+                    weakSelf.searches = RealmManager.shared.searchHistory
                 }
 
                 RealmManager.shared.save(newMovies)

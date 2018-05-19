@@ -10,6 +10,7 @@ import UIKit
 
 extension UIViewController {
 
+    // Show alert using an localised error messege
     func show(with error: Error, okAction handler: @escaping (UIAlertAction) -> Void) {
         showAlert(message: error.localizedDescription, title: "Error", okAction: handler)
     }

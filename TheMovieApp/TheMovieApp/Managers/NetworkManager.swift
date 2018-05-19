@@ -11,11 +11,12 @@ import SwiftyBeaver
 
 class NetworkManager {
 
-    //shared instance
     static let shared = NetworkManager()
 
     let reachabilityManager = Alamofire.NetworkReachabilityManager(host: "api.themoviedb.org")
     var isReachable: Bool = false
+    
+    // Method to check Network reachability
     func startNetworkReachabilityObserver() {
 
         reachabilityManager?.listener = { status in

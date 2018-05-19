@@ -14,11 +14,13 @@ import ObjectMapper
 
 extension Requestable {
 
+    // Created success and failure blocks using PromiseKit.
+    // Calling json request within the promise initializer to recieve the response.
     func createRequest<T: BaseMappable>() -> Promise<T> {
         UIApplication.shared.isNetworkActivityIndicatorVisible = true
 
         return Promise { (fulfil, reject) -> Void in
-            call { (response: DataResponse<T>) in
+            requestJSON { (response: DataResponse<T>) in
 
                 UIApplication.shared.isNetworkActivityIndicatorVisible = false
 

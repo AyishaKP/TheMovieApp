@@ -10,7 +10,9 @@ import Foundation
 import RealmSwift
 import SwiftyBeaver
 
+// Created a Realm Manager to manage to save and fetche objects from the database.
 class RealmManager {
+    
     static let shared: RealmManager = RealmManager()
     var realm: Realm? {
         do {
@@ -19,7 +21,15 @@ class RealmManager {
             return nil
         }
     }
-
+    var searchHistory: [Search]? {
+        guard let realm = realm else { return nil }
+        let fetchedHistory = Array(realm.objects(Search.self).sorted(byKeyPath: "timestamp"))
+        var searchHistory: [Search] = []
+        for (index, value) in fetchedHistory.enumerated() where index < 10 {
+            searchHistory.append(value)
+        }
+        return searchHistory
+    }
     // This method is used to save a new search text or update an existing one.
     func save(_ newSearch: String, saveHandler:  @escaping (Search) -> Void ) {
         do {

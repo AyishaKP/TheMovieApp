@@ -17,7 +17,8 @@ target 'TheMovieApp' do
   pod 'SwiftyBeaver'
   pod 'SDWebImage', '~> 4.0'
   pod 'EmptyDataSet-Swift'
-
+  pod 'EVReflection/XML'
+  
   target 'TheMovieAppTests' do
     inherit! :search_paths
     # Pods for testing

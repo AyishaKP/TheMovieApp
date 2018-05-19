@@ -11,26 +11,19 @@ import UIKit
 class MovieTableViewCell: UITableViewCell {
 
     @IBOutlet weak var posterImageView: UIImageView!
-
     @IBOutlet weak var titleNameLabel: UILabel!
-
     @IBOutlet weak var releaseDateLabel: UILabel!
-
     @IBOutlet weak var overViewLabel: UILabel!
-
     @IBOutlet weak var posterContainerView: UIView!
 
     override func awakeFromNib() {
         super.awakeFromNib()
-//        posterImageView.contentMode = .scaleAspectFill
         posterImageView.clipsToBounds = true
         posterImageView.backgroundColor = UIColor.transparentBlack
 
         let gradient = CAGradientLayer()
-
         gradient.frame = posterContainerView.bounds
         gradient.colors = [UIColor.clear.cgColor, UIColor.black.cgColor]
-
         posterContainerView.layer.insertSublayer(gradient, at: 0)
     }
 

@@ -11,6 +11,8 @@ import UIKit
 import Alamofire
 
 extension Movie {
+    
+    // Router implemements Requestable to customize different URL request attributes.
     enum Router: Requestable {
         case search(_: String, page: Int)
         static let imageUrl: String = "http://image.tmdb.org/t/p/w780/"

@@ -27,15 +27,7 @@ class MoviesTableViewController: UITableViewController {
             return nil
         }
     }
-     var searchHistory: [Search]? {
-        guard let realm = realm else { return nil }
-        let fetchedHistory = Array(realm.objects(Search.self).sorted(byKeyPath: "timestamp"))
-        var searchHistory: [Search] = []
-        for (index, value) in fetchedHistory.enumerated() where index < 10 {
-            searchHistory.append(value)
-        }
-        return searchHistory
-    }
+
     var searches: [Search]?
     var movies: [Movie] = []
     var page: Int = 0
@@ -53,7 +45,7 @@ class MoviesTableViewController: UITableViewController {
         // guard let realm = realm else { return }
         // movies = Array(realm.objects(Movie.self))
 
-        searches = searchHistory
+        searches = RealmManager.shared.searchHistory
         if movies.count == 0 {
             tableView.emptyDataSetSource = self
             tableView.emptyDataSetDelegate = self
@@ -77,7 +69,6 @@ class MoviesTableViewController: UITableViewController {
     private func customizeSearchBar() {
         searchController = {
             let controller = UISearchController(searchResultsController: nil)
-            controller.searchResultsUpdater = self
             controller.dimsBackgroundDuringPresentation = false
             controller.searchBar.sizeToFit()
             controller.searchBar.searchBarStyle = .minimal
