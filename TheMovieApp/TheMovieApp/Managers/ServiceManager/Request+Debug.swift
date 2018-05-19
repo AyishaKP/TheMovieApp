@@ -21,6 +21,8 @@ enum ServiceError: Error {
         switch self {
         case .unknownError:
             return "Sorry, something went wrong!"
+        case .connectionError:
+            return "Whoops!! It seems like the server is not reachable. Please try again."
         default: return "Sorry, something went wrong!"
         }
     }

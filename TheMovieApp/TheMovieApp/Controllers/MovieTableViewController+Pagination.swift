@@ -10,6 +10,7 @@ import UIKit
 
 extension MoviesTableViewController {
 
+    // Implemented for pagination
     override func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         if !searchController.isActive {
             let scrollViewContenteHeight = scrollView.contentSize.height

@@ -73,6 +73,7 @@ class MoviesTableViewController: UITableViewController {
         tableView.keyboardDismissMode = .interactive
     }
 
+    // MARK: - Search Customizations
     private func customizeSearchBar() {
         searchController = {
             let controller = UISearchController(searchResultsController: nil)

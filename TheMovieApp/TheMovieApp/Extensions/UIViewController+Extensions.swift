@@ -10,8 +10,12 @@ import UIKit
 
 extension UIViewController {
 
-    //Created Alert controller for showing alerts
-    func showAlert(message: String, title: String = "", okAction handler: ((UIAlertAction) -> Swift.Void)? = nil) {
+    func show(with error: Error, okAction handler: @escaping (UIAlertAction) -> Void) {
+        showAlert(message: error.localizedDescription, title: "Error", okAction: handler)
+    }
+
+    // Created alert controller for showing alerts
+    func showAlert(message: String, title: String = "", okAction handler: @escaping (UIAlertAction) -> Void) {
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let OKAction = UIAlertAction(title: "OK", style: .default, handler: handler)
         alertController.addAction(OKAction)

@@ -10,6 +10,7 @@ import UIKit
 import EmptyDataSet_Swift
 
 extension MoviesTableViewController: EmptyDataSetSource, EmptyDataSetDelegate {
+
     // MARK: - EmptyDataSetSource
     func title(forEmptyDataSet scrollView: UIScrollView) -> NSAttributedString? {
         return NSAttributedString(string: "Its empty around here!")

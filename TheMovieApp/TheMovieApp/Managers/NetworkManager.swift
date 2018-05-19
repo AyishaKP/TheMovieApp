@@ -7,6 +7,7 @@
 //
 
 import Alamofire
+import SwiftyBeaver
 
 class NetworkManager {
 
@@ -22,19 +23,19 @@ class NetworkManager {
 
             case .notReachable:
                 self.isReachable = false
-                print("The network is not reachable")
+                SwiftyBeaver.debug("The network is not reachable")
 
             case .unknown :
                 self.isReachable = false
-                print("It is unknown whether the network is reachable")
+                SwiftyBeaver.debug("It is unknown whether the network is reachable")
 
             case .reachable(.ethernetOrWiFi):
                 self.isReachable = true
-                print("The network is reachable over the WiFi connection")
+                SwiftyBeaver.debug("The network is reachable over the WiFi connection")
 
             case .reachable(.wwan):
                 self.isReachable = true
-                print("The network is reachable over the WWAN connection")
+                SwiftyBeaver.debug("The network is reachable over the WWAN connection")
 
             }
         }

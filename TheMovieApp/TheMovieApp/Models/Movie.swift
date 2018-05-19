@@ -10,6 +10,13 @@ import Foundation
 import ObjectMapper
 import RealmSwift
 
+// This mappable model is used to map the json
+// with in a search result to parse the list of movies.
+// This model is used to save in Realm database,
+// incase you need to cache the movies info.
+//
+// IMPORTANT: This model is created to map response
+// that comes in application/json format from the server.
 class Movie: Object, Mappable {
     @objc dynamic var movieId: Int = 0
     @objc dynamic var title: String?
@@ -26,6 +33,9 @@ class Movie: Object, Mappable {
         self.init()
     }
 
+    // This function is where all variable mappings should occur
+    // for a json with info regarding a movie record.
+    // It is executed by Mapper during the mapping (serialization and deserialization) process.
     func mapping(map: Map) {
         movieId <- map["id"]
         title <- map["title"]
