@@ -19,25 +19,13 @@ class MovieTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         posterImageView.clipsToBounds = true
-        posterImageView.backgroundColor = UIColor.transparentBlack
-
+        /*
+        - Provided Gradient to make sure the labels
+        - to appear clearly over the poster imageview
+         */
         let gradient = CAGradientLayer()
         gradient.frame = posterContainerView.bounds
         gradient.colors = [UIColor.clear.cgColor, UIColor.black.cgColor]
         posterContainerView.layer.insertSublayer(gradient, at: 0)
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-    }
-
-    override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
-        super.init(style: style, reuseIdentifier: reuseIdentifier)
-
-    }
-
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-    }
-
 }

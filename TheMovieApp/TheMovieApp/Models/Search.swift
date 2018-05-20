@@ -9,14 +9,16 @@
 import Foundation
 import RealmSwift
 
-// Created Search model for saving the search text and to manage the time stamp
-// Timestamp is used to show last 10 successful queries.
+/**
+- Created Search model for saving the search text and to manage the time stamp
+- Timestamp is used to show last 10 successful queries.
+ */
 class Search: Object {
-    
+
     @objc dynamic var query: String?
     @objc dynamic var timestamp: Date?
 
-    // Used primary key to make the searches unique.
+    /// Used primary key to make the searches unique.
     override static func primaryKey() -> String? {
         return "query"
     }

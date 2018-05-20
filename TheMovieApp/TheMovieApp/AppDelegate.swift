@@ -18,22 +18,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                         launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
 
         NetworkManager.shared.startNetworkReachabilityObserver()
-        customizeAppearance()
+        ThemeManager.shared.customizeAppearance()
         #if DEBUG
             SwiftyBeaver.addDestination(ConsoleDestination())
         #endif
 
         return true
     }
-    private func customizeAppearance() {
-        UINavigationBar.appearance().backgroundColor = UIColor.black
-        UINavigationBar.appearance().barTintColor = UIColor.black
-        UINavigationBar.appearance().titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white,
-            NSAttributedStringKey.font: UIFont.latoFont(.bold, size: 16)!]
-        UITextField.appearance().keyboardAppearance = .dark
-        UITextField.appearance(whenContainedInInstancesOf: [UISearchBar.self])
-            .defaultTextAttributes = [NSAttributedStringKey.foregroundColor.rawValue: UIColor.white]
-    }
+
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state.
         // This can occur for certain types of temporary interruptions (such as an incoming

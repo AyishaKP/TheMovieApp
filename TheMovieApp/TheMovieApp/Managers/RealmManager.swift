@@ -10,10 +10,14 @@ import Foundation
 import RealmSwift
 import SwiftyBeaver
 
-// Created a Realm Manager to manage to save and fetche objects from the database.
+/// Created a Realm Manager to manage to save and fetche objects from the database.
 class RealmManager {
-    
+
     static let shared: RealmManager = RealmManager()
+    private init() {
+
+    }
+
     var realm: Realm? {
         do {
             return try Realm()
@@ -30,7 +34,7 @@ class RealmManager {
         }
         return searchHistory
     }
-    // This method is used to save a new search text or update an existing one.
+    /// This method is used to save a new search text or update an existing one.
     func save(_ newSearch: String, saveHandler:  @escaping (Search) -> Void ) {
         do {
             let realm = try Realm()
@@ -46,7 +50,7 @@ class RealmManager {
         }
     }
 
-    // This method is used to handle new movies and save or update to the Realm database.
+    /// This method is used to handle new movies and save or update to the Realm database.
     func save(_ newMovies: [Movie]) {
         do {
             let realm = try Realm()

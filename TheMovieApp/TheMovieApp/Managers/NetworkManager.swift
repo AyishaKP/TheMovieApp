@@ -15,8 +15,8 @@ class NetworkManager {
 
     let reachabilityManager = Alamofire.NetworkReachabilityManager(host: "api.themoviedb.org")
     var isReachable: Bool = false
-    
-    // Method to check Network reachability
+
+    /// Method to check Network reachability
     func startNetworkReachabilityObserver() {
 
         reachabilityManager?.listener = { status in
@@ -40,7 +40,7 @@ class NetworkManager {
 
             }
         }
-        // start listening
+        /// start listening
         reachabilityManager?.startListening()
     }
 }

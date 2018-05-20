@@ -38,22 +38,23 @@ public extension Alamofire.Request {
     }
 }
 public extension Alamofire.DataRequest {
+    /**
+    - Using the validate method provided by Alamofire
+    - to check for differnt status codes in the response or
+    - handle various failed request scenarios.
+     */
 
-    // Using the validate method provided by Alamofire
-    // to check for differnt status codes in the response or
-    // handle various failed request scenarios.
-    
     @discardableResult
     func validateResponse() -> Self {
         return self.validate({ [weak self] (request, response, data) -> Alamofire.Request.ValidationResult in
 
-            // get status code from server
+            /// get status code from server
             let code = response.statusCode
 
-            // check the request url
+            /// check the request url
             let requestURL = String(describing: request?.url?.absoluteString ?? "NO URL")
 
-            // check if response is empty
+            /// check if response is empty
             guard let data = data, let string = String(data: data, encoding: .utf8) else {
                 Log.warning(String(code) + " " + requestURL + "\nEmpty response")
                 return .failure(ServiceError.invalidResponse)
@@ -61,7 +62,7 @@ public extension Alamofire.DataRequest {
 
             var result: Alamofire.Request.ValidationResult = .success
 
-            // check if response is html
+            /// check if response is html
             if (response.allHeaderFields["Content-Type"] as? String)?.contains("text/html") == true {
                 Log.info(String(code) + " " + requestURL + "\n\(string)")
                 result = .failure(ServiceError.invalidResponse)

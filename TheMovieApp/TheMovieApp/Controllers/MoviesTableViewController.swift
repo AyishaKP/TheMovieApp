@@ -13,21 +13,13 @@ import EmptyDataSet_Swift
 
 class MoviesTableViewController: UITableViewController {
 
-    // MARK: - Variables
+    /// Variables
     lazy var dateFormatter: DateFormatter = {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "dd MMMM, yyyy"
         return dateFormatter
     }()
     var searchController = UISearchController()
-    var realm: Realm? {
-        do {
-            return try Realm()
-        } catch {
-            return nil
-        }
-    }
-
     var searches: [Search]?
     var movies: [Movie] = []
     var page: Int = 0
@@ -41,9 +33,10 @@ class MoviesTableViewController: UITableViewController {
         customizeTableView()
         customizeSearchBar()
 
-        /* Load stored movies by uncommenting the below lines */
+        /* Load stored movies by uncommenting the below lines
         // guard let realm = realm else { return }
         // movies = Array(realm.objects(Movie.self))
+         */
 
         searches = RealmManager.shared.searchHistory
         if movies.count == 0 {

@@ -12,6 +12,7 @@ import ObjectMapper
 import EVReflection
 import SwiftyBeaver
 
+/// For XML converting scalability
 extension DataRequest {
 
     enum ErrorCode: Int {
@@ -96,14 +97,12 @@ extension DataRequest {
     }
 
     /**
-     Adds a handler to be called once the request has finished.
-     
-     - parameter queue:             The queue on which the completion handler is dispatched.
-     - parameter keyPath:           The key path where object mapping should be performed
-     - parameter object:            An object to perform the mapping on to
+        Adds a handler to be called once the request has finished.
+     - parameter queue: The queue on which the completion handler is dispatched.
+     - parameter keyPath: The key path where object mapping should be performed
+     - parameter object: An object to perform the mapping on to
      - parameter completionHandler: A closure to be executed once the request has finished
        and the data has been mapped by ObjectMapper.
-     
      - returns: The request.
      */
     @discardableResult
@@ -180,12 +179,10 @@ extension DataRequest {
 
     /**
      Adds a handler to be called once the request has finished. T: BaseMappable
-     
      - parameter queue: The queue on which the completion handler is dispatched.
      - parameter keyPath: The key path where object mapping should be performed
      - parameter completionHandler: A closure to be executed once the request has finished
        and the data has been mapped by ObjectMapper.
-     
      - returns: The request.
      */
     @discardableResult
@@ -201,12 +198,10 @@ extension DataRequest {
 
     /**
      Adds a handler to be called once the request has finished. T: ImmutableMappable
-     
      - parameter queue: The queue on which the completion handler is dispatched.
      - parameter keyPath: The key path where object mapping should be performed
      - parameter completionHandler: A closure to be executed once the request has finished
        and the data has been mapped by ObjectMapper.
-     
      - returns: The request.
      */
     @discardableResult
