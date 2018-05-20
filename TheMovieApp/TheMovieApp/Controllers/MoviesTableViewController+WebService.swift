@@ -52,9 +52,12 @@ extension MoviesTableViewController {
     - catch block will receive all errors that were caught.
     */
     func sendRequest(with searchText: String) {
-        firstly { () -> Promise<SearchHandler> in
-            Movie.Router.search(searchText, page: page + 1).createRequest()
-            }.then { [weak self] (handler: SearchHandler) -> Void in
+        firstly { [unowned self] () -> Promise<SearchHandler> in
+                /// Sending the search text and the next page number
+                /// to the requestable to create a request.
+                Movie.Router.search(searchText, page: self.page + 1).createRequest()
+            }
+            .then { [weak self] (handler: SearchHandler) -> Void in
 
                 guard let weakSelf = self else { return }
                 weakSelf.isLoading = false
@@ -73,12 +76,15 @@ extension MoviesTableViewController {
                 DispatchQueue.main.async {
                     weakSelf.tableView.reloadData()
                 }
-
-            }.catch { [weak self] err in
-                if let error: ServiceError = err as? ServiceError {
-                    guard let weakSelf = self else { return }
-                    weakSelf.show(with: error) { (_) in weakSelf.searchController.searchBar.becomeFirstResponder() }
             }
-        }
+            .catch { [weak self] err in
+                guard let weakSelf = self else { return }
+                weakSelf.isLoading = false
+                if let error: ServiceError = err as? ServiceError {
+                    weakSelf.show(with: error) { (_) in weakSelf.searchController.searchBar.becomeFirstResponder()
+                        weakSelf.tableView.reloadData()
+                    }
+                }
+            }
     }
 }
