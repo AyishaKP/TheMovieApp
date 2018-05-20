@@ -12,13 +12,14 @@ import UIKit
 extension UIFont {
 
     /// Used to provide Lato font to the Labels
-    enum LatoFont: CustomStringConvertible {
+    public enum LatoFont: CustomStringConvertible {
         case light
         case regular
         case medium
         case bold
         case black
-        var description: String {
+
+        public var description: String {
             var fontName: String = ""
             switch self {
             case .light: fontName = "Light"

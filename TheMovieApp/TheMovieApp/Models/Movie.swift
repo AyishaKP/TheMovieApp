@@ -12,16 +12,16 @@ import RealmSwift
 
 /**
 - This mappable model is used to map the json
-- with in a search result to parse the list of movies.
+  with in a search result to parse the list of movies.
 - This model is used to save in Realm database,
-- incase you need to cache the movies info.
-//
+  incase you need to cache the movies info.
+
 - **IMPORTANT**: This model is created to map response
-- that comes in application/json format from the server.
+  that comes in application/json format from the server.
  */
 class Movie: Object, Mappable {
 
-    /// Parameters for search.
+    /// Parameters for a movie.
     @objc dynamic var movieId: Int = 0
     @objc dynamic var title: String?
     @objc dynamic var originalTitle: String?
@@ -33,7 +33,7 @@ class Movie: Object, Mappable {
     @objc dynamic var releaseDate: Date?
     @objc dynamic var backdropPath: String?
 
-    /// Parameters for search.
+    /// Parameters for a movie.
     required convenience init?(map: Map) {
         self.init()
     }
@@ -56,7 +56,7 @@ class Movie: Object, Mappable {
         backdropPath <- map["backdrop_path"]
     }
 
-    /// Used primary key to make the searches unique.
+    /// Used primary key to make the movie unique.
     override static func primaryKey() -> String? {
         return "movieId"
     }

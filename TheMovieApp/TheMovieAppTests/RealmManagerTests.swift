@@ -12,6 +12,11 @@ import RealmSwift
 
 class RealmManagerTests: XCTestCase {
     
+    private struct Constants {
+        static let inputSearchTerm = "batman"
+        static let inputMovieTitle = "Batman"
+    }
+    
     override func setUp() {
         super.setUp()
         // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -20,22 +25,32 @@ class RealmManagerTests: XCTestCase {
     override func tearDown() {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
-        RealmManager.shared.realm?.deleteAll()
-    }
-    
-    func testRealmVariable() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        let realm = RealmManager.shared.realm
-        XCTAssertNotNil(realm, "Realm variable should not be nil")
-    }
-
-    
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+        do {
+            try? RealmManager.shared.realm?.write {
+                RealmManager.shared.realm?.deleteAll()
+            }
         }
     }
     
+    func testInit() {
+        XCTAssertNotNil(RealmManager.shared, "Realm manager should be a singleton class")
+    }
+    
+    func testRealmVar() {
+        XCTAssertNotNil(RealmManager.shared.realm, "Realm should be accessible")
+    }
+    
+    func testSaveSearch() {
+        RealmManager.shared.save(Constants.inputSearchTerm) { (search) in
+            XCTAssertTrue(search.query! == Constants.inputSearchTerm, "The input search term should be same as the search model query created using it.")
+        }
+    }
+    
+    func testSaveMovies() {
+        let movies:[Movie] = [Movie(JSON: ["id":1, "title": Constants.inputMovieTitle])!]
+        RealmManager.shared.save(movies)
+        let fetchedMovies = RealmManager.shared.realm?.objects(Movie.self)
+        XCTAssertTrue(fetchedMovies?.count == movies.count, "There should be same number of movies as saved")
+        XCTAssertTrue(fetchedMovies?.first?.title! == Constants.inputMovieTitle, "The input movie title should be same as the movie model title created using it.")
+    }
 }

@@ -9,6 +9,7 @@
 import Alamofire
 import SwiftyBeaver
 
+/// This class will let us know about the network reachability.
 final class NetworkManager {
 
     /// Singleton Instance

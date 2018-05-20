@@ -12,9 +12,13 @@ import ObjectMapper
 import EVReflection
 import SwiftyBeaver
 
-/// For XML converting scalability
+/**
+ For scalability this extesion converts XML response data to Dictionary
+ using EVReflection and then to Mappable model.
+ */
 extension DataRequest {
 
+    /// Errors that cna occur during response serialization
     enum ErrorCode: Int {
         case noData, dataSerializationFailed
     }

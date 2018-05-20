@@ -34,11 +34,11 @@
 		5A18616A20AB711900BAED0B /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = 5A18615620AB711900BAED0B /* README.txt */; };
 		5A1B661920AEBF8E00B5D800 /* MoviesTableViewController+WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1B661820AEBF8E00B5D800 /* MoviesTableViewController+WebService.swift */; };
 		5A1B661B20AFFECF00B5D800 /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1B661A20AFFECF00B5D800 /* RealmManager.swift */; };
+		5A256E8720B1F84100D21B21 /* LatoFontExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A256E8620B1F84100D21B21 /* LatoFontExtensionTests.swift */; };
 		5ACB24E520B0978400F73189 /* Request+XML.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ACB24E420B0978400F73189 /* Request+XML.swift */; };
 		5ACB24E720B0A92200F73189 /* ThemeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ACB24E620B0A92200F73189 /* ThemeManager.swift */; };
 		5ACB24E920B0ACB000F73189 /* DateTransformTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ACB24E820B0ACB000F73189 /* DateTransformTests.swift */; };
 		5ACB24EB20B0BF8000F73189 /* RealmManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ACB24EA20B0BF8000F73189 /* RealmManagerTests.swift */; };
-		5ACB24ED20B1540100F73189 /* MoviesTableViewVariablesTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ACB24EC20B1540100F73189 /* MoviesTableViewVariablesTest.swift */; };
 		5ACB24F120B1B26100F73189 /* RequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ACB24F020B1B26100F73189 /* RequestManager.swift */; };
 		5ACB24F320B1B8FF00F73189 /* LoadingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ACB24F220B1B8FF00F73189 /* LoadingTableViewCell.swift */; };
 		5AEA3E6B20AB8FAE00AA44C9 /* DateTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AEA3E6A20AB8FAE00AA44C9 /* DateTransform.swift */; };
@@ -106,11 +106,11 @@
 		5A18615620AB711900BAED0B /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
 		5A1B661820AEBF8E00B5D800 /* MoviesTableViewController+WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MoviesTableViewController+WebService.swift"; sourceTree = "<group>"; };
 		5A1B661A20AFFECF00B5D800 /* RealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
+		5A256E8620B1F84100D21B21 /* LatoFontExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LatoFontExtensionTests.swift; sourceTree = "<group>"; };
 		5ACB24E420B0978400F73189 /* Request+XML.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Request+XML.swift"; sourceTree = "<group>"; };
 		5ACB24E620B0A92200F73189 /* ThemeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeManager.swift; sourceTree = "<group>"; };
 		5ACB24E820B0ACB000F73189 /* DateTransformTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateTransformTests.swift; sourceTree = "<group>"; };
 		5ACB24EA20B0BF8000F73189 /* RealmManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManagerTests.swift; sourceTree = "<group>"; };
-		5ACB24EC20B1540100F73189 /* MoviesTableViewVariablesTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesTableViewVariablesTest.swift; sourceTree = "<group>"; };
 		5ACB24F020B1B26100F73189 /* RequestManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestManager.swift; sourceTree = "<group>"; };
 		5ACB24F220B1B8FF00F73189 /* LoadingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingTableViewCell.swift; sourceTree = "<group>"; };
 		5AEA3E6A20AB8FAE00AA44C9 /* DateTransform.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateTransform.swift; sourceTree = "<group>"; };
@@ -203,7 +203,7 @@
 				5A137FBE20A9A04A00F3C789 /* Info.plist */,
 				5ACB24E820B0ACB000F73189 /* DateTransformTests.swift */,
 				5ACB24EA20B0BF8000F73189 /* RealmManagerTests.swift */,
-				5ACB24EC20B1540100F73189 /* MoviesTableViewVariablesTest.swift */,
+				5A256E8620B1F84100D21B21 /* LatoFontExtensionTests.swift */,
 			);
 			path = TheMovieAppTests;
 			sourceTree = "<group>";
@@ -691,9 +691,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5ACB24ED20B1540100F73189 /* MoviesTableViewVariablesTest.swift in Sources */,
 				5ACB24E920B0ACB000F73189 /* DateTransformTests.swift in Sources */,
 				5A137FBD20A9A04A00F3C789 /* TheMovieAppTests.swift in Sources */,
+				5A256E8720B1F84100D21B21 /* LatoFontExtensionTests.swift in Sources */,
 				5ACB24EB20B0BF8000F73189 /* RealmManagerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -11,19 +11,38 @@ import SDWebImage
 import RealmSwift
 import EmptyDataSet_Swift
 
+/**
+ This table view controller will show the list of movies
+ as well as a search list
+ */
 class MoviesTableViewController: UITableViewController {
 
-    /// Variables
+    /// Date formatter for displaying release date
     lazy var dateFormatter: DateFormatter = {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "dd MMMM, yyyy"
         return dateFormatter
     }()
+
+    /// Search controller used to search for movies
     var searchController = UISearchController()
+
+    /// Array having recent searches and can have a maximum of 10 recent searches.
     var searches: [Search]?
+
+    /// Array having list of movies fetched from server.
     var movies: [Movie] = []
+
+    /**
+      Variable that references to the current search
+      for which the movies list is being displayed.
+     */
     var currentSearch: Search?
+
+    /// Variable that stores the current number of pages that are already loaded.
     var page: Int = 0
+
+    /// Bool value indicating weather there is an ongoing request for fetching the movies.
     var isLoading: Bool = false
 
     // MARK: - View Life Cycle
@@ -50,14 +69,17 @@ class MoviesTableViewController: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    // MARK: - UI Customizations
+    /// A method that takes care of UI Customizations
     private func customizeTableView() {
         title = "M O V I E"
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "searchResultCell")
         tableView.keyboardDismissMode = .interactive
     }
 
-    // MARK: - Search Customizations
+    /**
+     A method that takes care of creating a search controller
+     and adding it to the tableView header.
+    */
     private func customizeSearchBar() {
         searchController = {
             let controller = UISearchController(searchResultsController: nil)

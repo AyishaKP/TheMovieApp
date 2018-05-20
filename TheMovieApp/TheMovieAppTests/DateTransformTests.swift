@@ -7,8 +7,16 @@
 //
 
 import XCTest
+import ObjectMapper
 @testable import TheMovieApp
+
 class DateTransformTests: XCTestCase {
+    
+    let mapper = Mapper<DateType>()
+
+    private struct Constants {
+        static let inputDateString = "23-04-1993"
+    }
     
     override func setUp() {
         super.setUp()
@@ -20,21 +28,42 @@ class DateTransformTests: XCTestCase {
         super.tearDown()
     }
     
-    func testDateTransformCheck() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        let dateS = "23-04-1993"
-        let dateTransform = DateTransform(dateFormat: "dd-MM-yyyy")
-        let date = dateTransform.transformFromJSON(dateS)
-        let convD = dateTransform.transformToJSON(date)
-        XCTAssertEqual(dateS, convD, "The input and ouput should be equal")
+    func testDataTransform() {
+        
+        let mappedObject = mapper.map(JSONObject: ["date": Constants.inputDateString])
+        
+        let convertDateFormatter = DateFormatter()
+        convertDateFormatter.dateFormat = "dd-MM-yyyy"
+        
+        XCTAssertNotNil(mappedObject)
+        XCTAssertEqual(mappedObject?.stringDate, Constants.inputDateString)
+        XCTAssertEqual(convertDateFormatter.string(from: (mappedObject?.date)!), Constants.inputDateString)
     }
     
     func testPerformanceExample() {
         // This is an example of a performance test case.
         self.measure {
             // Put the code you want to measure the time of here.
+            _ = Mapper<DateType>().map(JSONObject: ["date": Constants.inputDateString])
         }
     }
+}
+
+class DateType: Mappable {
     
+    var date: Date?
+    var stringDate: String?
+    
+    init(){
+        
+    }
+    
+    required init?(map: Map){
+        
+    }
+    
+    func mapping(map: Map) {
+        stringDate <- map["date"]
+        date <- (map["date"], DateTransform(dateFormat: "dd-MM-yyyy"))
+    }
 }

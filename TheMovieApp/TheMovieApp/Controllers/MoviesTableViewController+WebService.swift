@@ -11,6 +11,7 @@ import PromiseKit
 import SwiftyBeaver
 import RealmSwift
 
+/// This extension will handle the API calls to the server and handle the UI after getting the response.
 extension MoviesTableViewController {
 
     // MARK: - Search API Handling

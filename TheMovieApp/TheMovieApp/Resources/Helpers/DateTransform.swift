@@ -13,7 +13,7 @@ import ObjectMapper
  while parsing a date string in json response.
  */
 class DateTransform: DateFormatterTransform {
-    
+
     /**
       parameter dateFormat needs to be passed to the initializer
       to support any date format that can be received from backend.

@@ -10,6 +10,7 @@ import UIKit
 import RealmSwift
 import SwiftyBeaver
 
+/// This extension will handle the search bar delegates.
 extension MoviesTableViewController: UISearchBarDelegate {
 
     // MARK: - UISearchBarDelegate

@@ -8,7 +8,12 @@
 
 import UIKit
 
+/// This extension will handle the table view data source and delegate.
 extension MoviesTableViewController {
+
+    private struct Constants {
+        static let estimatedRowHeight: CGFloat = 300
+    }
 
     // MARK: - Table view data source
 
@@ -76,7 +81,7 @@ extension MoviesTableViewController {
             movieCell.releaseDateLabel.text = "Release Date: \(releaseDateString)"
         }
 
-        movieCell.overViewLabel.text = "OverView: \(movie.overview ?? "")"
+        movieCell.overViewLabel.text = "Overview: \(movie.overview ?? "")"
         movieCell.contentView.layer.borderColor = UIColor.swanWhite.cgColor
         movieCell.contentView.layer.borderWidth = 1
         return movieCell
@@ -85,7 +90,7 @@ extension MoviesTableViewController {
     // MARK: - Table view delegates
 
     override func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 350
+        return Constants.estimatedRowHeight
     }
 
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

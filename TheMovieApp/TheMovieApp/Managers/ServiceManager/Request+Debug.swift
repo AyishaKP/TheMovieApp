@@ -17,7 +17,7 @@ enum ServiceError: Error {
     case notFound
     case invalidResponse
 
-    var localizedDescription: String {
+    var errorDescription: String {
         switch self {
         case .unknownError:
             return "Sorry, something went wrong!"

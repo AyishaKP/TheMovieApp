@@ -2,203 +2,119 @@
   "warnings": [
     {
       "file": "/Users/ayisha/Documents/GitHub/TheMovieApp/TheMovieApp/TheMovieApp/Controllers/MovieTableViewControlller+EmptyDataSet.swift",
-      "line": 15,
+      "line": 16,
       "symbol": "MoviesTableViewController.title(forEmptyDataSet:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/ayisha/Documents/GitHub/TheMovieApp/TheMovieApp/TheMovieApp/Controllers/MovieTableViewControlller+EmptyDataSet.swift",
-      "line": 18,
+      "line": 20,
       "symbol": "MoviesTableViewController.description(forEmptyDataSet:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/ayisha/Documents/GitHub/TheMovieApp/TheMovieApp/TheMovieApp/Controllers/MovieTableViewControlller+EmptyDataSet.swift",
-      "line": 21,
+      "line": 24,
       "symbol": "MoviesTableViewController.image(forEmptyDataSet:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/ayisha/Documents/GitHub/TheMovieApp/TheMovieApp/TheMovieApp/Controllers/MovieTableViewControlller+EmptyDataSet.swift",
-      "line": 24,
+      "line": 28,
       "symbol": "MoviesTableViewController.buttonTitle(forEmptyDataSet:for:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/ayisha/Documents/GitHub/TheMovieApp/TheMovieApp/TheMovieApp/Controllers/MovieTableViewControlller+EmptyDataSet.swift",
-      "line": 30,
+      "line": 36,
       "symbol": "MoviesTableViewController.emptyDataSetShouldDisplay(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/ayisha/Documents/GitHub/TheMovieApp/TheMovieApp/TheMovieApp/Controllers/MovieTableViewControlller+EmptyDataSet.swift",
-      "line": 33,
+      "line": 40,
       "symbol": "MoviesTableViewController.emptyDataSetShouldAllowTouch(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/ayisha/Documents/GitHub/TheMovieApp/TheMovieApp/TheMovieApp/Controllers/MovieTableViewControlller+EmptyDataSet.swift",
-      "line": 36,
+      "line": 44,
       "symbol": "MoviesTableViewController.emptyDataSetShouldAllowScroll(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/ayisha/Documents/GitHub/TheMovieApp/TheMovieApp/TheMovieApp/Controllers/MovieTableViewControlller+EmptyDataSet.swift",
-      "line": 39,
+      "line": 48,
       "symbol": "MoviesTableViewController.emptyDataSet(_:didTapButton:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/ayisha/Documents/GitHub/TheMovieApp/TheMovieApp/TheMovieApp/Controllers/MoviesTableViewController+Table.swift",
-      "line": 15,
+      "line": 20,
       "symbol": "MoviesTableViewController.numberOfSections(in:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/ayisha/Documents/GitHub/TheMovieApp/TheMovieApp/TheMovieApp/Controllers/MoviesTableViewController+Table.swift",
-      "line": 32,
+      "line": 37,
       "symbol": "MoviesTableViewController.tableView(_:numberOfRowsInSection:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/ayisha/Documents/GitHub/TheMovieApp/TheMovieApp/TheMovieApp/Controllers/MoviesTableViewController+Table.swift",
-      "line": 39,
+      "line": 44,
       "symbol": "MoviesTableViewController.tableView(_:cellForRowAt:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/ayisha/Documents/GitHub/TheMovieApp/TheMovieApp/TheMovieApp/Controllers/MoviesTableViewController+Table.swift",
-      "line": 87,
+      "line": 92,
       "symbol": "MoviesTableViewController.tableView(_:estimatedHeightForRowAt:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/ayisha/Documents/GitHub/TheMovieApp/TheMovieApp/TheMovieApp/Controllers/MoviesTableViewController+Table.swift",
-      "line": 91,
+      "line": 96,
       "symbol": "MoviesTableViewController.tableView(_:heightForRowAt:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/ayisha/Documents/GitHub/TheMovieApp/TheMovieApp/TheMovieApp/Controllers/MoviesTableViewController+Table.swift",
-      "line": 95,
+      "line": 100,
       "symbol": "MoviesTableViewController.tableView(_:didSelectRowAt:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/ayisha/Documents/GitHub/TheMovieApp/TheMovieApp/TheMovieApp/Controllers/MoviesTableViewController+WebService.swift",
-      "line": 18,
+      "line": 19,
       "symbol": "MoviesTableViewController.fetchMovies(with:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/ayisha/Documents/GitHub/TheMovieApp/TheMovieApp/TheMovieApp/Controllers/MoviesTableViewController.swift",
-      "line": null,
-      "symbol": "MoviesTableViewController",
-      "symbol_kind": "source.lang.swift.decl.extension",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/ayisha/Documents/GitHub/TheMovieApp/TheMovieApp/TheMovieApp/Controllers/MoviesTableViewController.swift",
-      "line": null,
-      "symbol": "MoviesTableViewController",
-      "symbol_kind": "source.lang.swift.decl.extension",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/ayisha/Documents/GitHub/TheMovieApp/TheMovieApp/TheMovieApp/Controllers/MoviesTableViewController.swift",
-      "line": null,
-      "symbol": "MoviesTableViewController",
-      "symbol_kind": "source.lang.swift.decl.extension",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/ayisha/Documents/GitHub/TheMovieApp/TheMovieApp/TheMovieApp/Controllers/MoviesTableViewController.swift",
-      "line": null,
-      "symbol": "MoviesTableViewController",
-      "symbol_kind": "source.lang.swift.decl.extension",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/ayisha/Documents/GitHub/TheMovieApp/TheMovieApp/TheMovieApp/Controllers/MoviesTableViewController.swift",
-      "line": null,
-      "symbol": "MoviesTableViewController",
-      "symbol_kind": "source.lang.swift.decl.extension",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/ayisha/Documents/GitHub/TheMovieApp/TheMovieApp/TheMovieApp/Controllers/MoviesTableViewController.swift",
-      "line": 14,
-      "symbol": "MoviesTableViewController",
-      "symbol_kind": "source.lang.swift.decl.class",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/ayisha/Documents/GitHub/TheMovieApp/TheMovieApp/TheMovieApp/Controllers/MoviesTableViewController.swift",
-      "line": 22,
-      "symbol": "MoviesTableViewController.searchController",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/ayisha/Documents/GitHub/TheMovieApp/TheMovieApp/TheMovieApp/Controllers/MoviesTableViewController.swift",
-      "line": 23,
-      "symbol": "MoviesTableViewController.searches",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/ayisha/Documents/GitHub/TheMovieApp/TheMovieApp/TheMovieApp/Controllers/MoviesTableViewController.swift",
-      "line": 24,
-      "symbol": "MoviesTableViewController.movies",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/ayisha/Documents/GitHub/TheMovieApp/TheMovieApp/TheMovieApp/Controllers/MoviesTableViewController.swift",
-      "line": 25,
-      "symbol": "MoviesTableViewController.currentSearch",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/ayisha/Documents/GitHub/TheMovieApp/TheMovieApp/TheMovieApp/Controllers/MoviesTableViewController.swift",
-      "line": 26,
-      "symbol": "MoviesTableViewController.page",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/ayisha/Documents/GitHub/TheMovieApp/TheMovieApp/TheMovieApp/Controllers/MoviesTableViewController.swift",
-      "line": 27,
-      "symbol": "MoviesTableViewController.isLoading",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/ayisha/Documents/GitHub/TheMovieApp/TheMovieApp/TheMovieApp/Controllers/MoviesTableViewController.swift",
-      "line": 30,
+      "line": 49,
       "symbol": "MoviesTableViewController.viewDidLoad()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/ayisha/Documents/GitHub/TheMovieApp/TheMovieApp/TheMovieApp/Controllers/MoviesTableViewController.swift",
-      "line": 48,
+      "line": 67,
       "symbol": "MoviesTableViewController.didReceiveMemoryWarning()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
@@ -239,13 +155,6 @@
       "warning": "undocumented"
     },
     {
-      "file": "/Users/ayisha/Documents/GitHub/TheMovieApp/TheMovieApp/TheMovieApp/Managers/NetworkManager.swift",
-      "line": 12,
-      "symbol": "NetworkManager",
-      "symbol_kind": "source.lang.swift.decl.class",
-      "warning": "undocumented"
-    },
-    {
       "file": "/Users/ayisha/Documents/GitHub/TheMovieApp/TheMovieApp/TheMovieApp/Managers/ServiceManager/Request+Debug.swift",
       "line": 14,
       "symbol": "ServiceError",
@@ -283,7 +192,7 @@
     {
       "file": "/Users/ayisha/Documents/GitHub/TheMovieApp/TheMovieApp/TheMovieApp/Managers/ServiceManager/Request+Debug.swift",
       "line": 20,
-      "symbol": "ServiceError.localizedDescription",
+      "symbol": "ServiceError.errorDescription",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
@@ -296,37 +205,16 @@
     },
     {
       "file": "/Users/ayisha/Documents/GitHub/TheMovieApp/TheMovieApp/TheMovieApp/Managers/ServiceManager/Request+XML.swift",
-      "line": 18,
-      "symbol": "DataRequest.ErrorCode",
-      "symbol_kind": "source.lang.swift.decl.enum",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/ayisha/Documents/GitHub/TheMovieApp/TheMovieApp/TheMovieApp/Managers/ServiceManager/Request+XML.swift",
-      "line": 19,
+      "line": 23,
       "symbol": "DataRequest.ErrorCode.dataSerializationFailed",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/ayisha/Documents/GitHub/TheMovieApp/TheMovieApp/TheMovieApp/Managers/ServiceManager/Request+XML.swift",
-      "line": 19,
+      "line": 23,
       "symbol": "DataRequest.ErrorCode.noData",
       "symbol_kind": "source.lang.swift.decl.enumelement",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/ayisha/Documents/GitHub/TheMovieApp/TheMovieApp/TheMovieApp/Managers/ServiceManager/RequestManager.swift",
-      "line": 12,
-      "symbol": "RequestManager",
-      "symbol_kind": "source.lang.swift.decl.class",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/ayisha/Documents/GitHub/TheMovieApp/TheMovieApp/TheMovieApp/Managers/ServiceManager/RequestManager.swift",
-      "line": 17,
-      "symbol": "RequestManager.manager",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
@@ -425,13 +313,6 @@
       "line": 25,
       "symbol": "Requestable.encoding",
       "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/ayisha/Documents/GitHub/TheMovieApp/TheMovieApp/TheMovieApp/Managers/ThemeManager.swift",
-      "line": 11,
-      "symbol": "ThemeManager",
-      "symbol_kind": "source.lang.swift.decl.class",
       "warning": "undocumented"
     },
     {
@@ -593,90 +474,6 @@
       "line": 20,
       "symbol": "Search.timestamp",
       "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/ayisha/Documents/GitHub/TheMovieApp/TheMovieApp/TheMovieApp/Views/Cells/LoadingTableViewCell.swift",
-      "line": 11,
-      "symbol": "LoadingTableViewCell",
-      "symbol_kind": "source.lang.swift.decl.class",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/ayisha/Documents/GitHub/TheMovieApp/TheMovieApp/TheMovieApp/Views/Cells/LoadingTableViewCell.swift",
-      "line": 13,
-      "symbol": "LoadingTableViewCell.activityIndicator",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/ayisha/Documents/GitHub/TheMovieApp/TheMovieApp/TheMovieApp/Views/Cells/LoadingTableViewCell.swift",
-      "line": 15,
-      "symbol": "LoadingTableViewCell.loadingLabel",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/ayisha/Documents/GitHub/TheMovieApp/TheMovieApp/TheMovieApp/Views/Cells/LoadingTableViewCell.swift",
-      "line": 17,
-      "symbol": "LoadingTableViewCell.awakeFromNib()",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/ayisha/Documents/GitHub/TheMovieApp/TheMovieApp/TheMovieApp/Views/Cells/LoadingTableViewCell.swift",
-      "line": 24,
-      "symbol": "LoadingTableViewCell.setSelected(_:animated:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/ayisha/Documents/GitHub/TheMovieApp/TheMovieApp/TheMovieApp/Views/Cells/MovieTableViewCell.swift",
-      "line": 11,
-      "symbol": "MovieTableViewCell",
-      "symbol_kind": "source.lang.swift.decl.class",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/ayisha/Documents/GitHub/TheMovieApp/TheMovieApp/TheMovieApp/Views/Cells/MovieTableViewCell.swift",
-      "line": 13,
-      "symbol": "MovieTableViewCell.posterImageView",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/ayisha/Documents/GitHub/TheMovieApp/TheMovieApp/TheMovieApp/Views/Cells/MovieTableViewCell.swift",
-      "line": 14,
-      "symbol": "MovieTableViewCell.titleNameLabel",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/ayisha/Documents/GitHub/TheMovieApp/TheMovieApp/TheMovieApp/Views/Cells/MovieTableViewCell.swift",
-      "line": 15,
-      "symbol": "MovieTableViewCell.releaseDateLabel",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/ayisha/Documents/GitHub/TheMovieApp/TheMovieApp/TheMovieApp/Views/Cells/MovieTableViewCell.swift",
-      "line": 16,
-      "symbol": "MovieTableViewCell.overViewLabel",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/ayisha/Documents/GitHub/TheMovieApp/TheMovieApp/TheMovieApp/Views/Cells/MovieTableViewCell.swift",
-      "line": 17,
-      "symbol": "MovieTableViewCell.posterContainerView",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/ayisha/Documents/GitHub/TheMovieApp/TheMovieApp/TheMovieApp/Views/Cells/MovieTableViewCell.swift",
-      "line": 19,
-      "symbol": "MovieTableViewCell.awakeFromNib()",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     }
   ],

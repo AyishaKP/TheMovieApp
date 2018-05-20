@@ -8,6 +8,7 @@
 
 import UIKit
 
+/// This extension will handle the scroll view delegate for handing pagination.
 extension MoviesTableViewController {
 
     /// Implemented for pagination

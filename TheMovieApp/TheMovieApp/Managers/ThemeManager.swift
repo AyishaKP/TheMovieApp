@@ -8,6 +8,7 @@
 
 import UIKit
 
+/// This class will craete a theme manager to customize appearance.
 final class ThemeManager {
 
     /// Singleton Instance

@@ -10,7 +10,7 @@ import Foundation
 import RealmSwift
 import SwiftyBeaver
 
-/// Created a Realm Manager to manage to save and fetche objects from the database.
+/// This class is used to manage to save and fetche objects from the database.
 final class RealmManager {
 
     /// Singleton Instance
@@ -22,7 +22,7 @@ final class RealmManager {
     }
 
     /// This variable is used to instantiate a realm instance to fetch, save or delete realm objects.
-    private var realm: Realm? {
+    internal var realm: Realm? {
         do {
             return try Realm()
         } catch {
