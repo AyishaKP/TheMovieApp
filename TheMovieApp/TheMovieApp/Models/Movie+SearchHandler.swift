@@ -11,11 +11,11 @@ import RealmSwift
 
 /**
 - This mappable model is used to map the response
-- that comes after passing a search term and page number
-- to get the list of movies that contains the search term.
-//
+  that comes after passing a search term and page number
+  to get the list of movies that contains the search term.
+
 - IMPORTANT: This model is created to map response
-- that comes in application/json format from the server.
+  that comes in application/json format from the server.
  */
 class SearchHandler: Mappable {
 

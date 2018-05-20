@@ -8,6 +8,8 @@
 
 import UIKit
 
+/// This extension consist of useful methods that can be used
+// to show alerts in a UIViewController.
 extension UIViewController {
 
     /// Show alert using an localised error messege

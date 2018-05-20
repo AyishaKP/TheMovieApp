@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Movie Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Class/Movie" class="dashAnchor"></a>
+    <a title="Movie Class Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html"> Docs</a> (40% documented)</p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html"> Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        Movie Class Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/AppDelegate.html">AppDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/DateTransform.html">DateTransform</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/LoadingTableViewCell.html">LoadingTableViewCell</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Movie.html">Movie</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Movie/Router.html">– Router</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/MovieTableViewCell.html">MovieTableViewCell</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/MoviesTableViewController.html">MoviesTableViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/NetworkManager.html">NetworkManager</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/RealmManager.html">RealmManager</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/RequestManager.html">RequestManager</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Search.html">Search</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SearchHandler.html">SearchHandler</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ThemeManager.html">ThemeManager</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/ServiceError.html">ServiceError</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Extensions/Alamofire.html">Alamofire</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Alamofire/Request.html">– Request</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Alamofire/DataRequest.html">– DataRequest</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/DataRequest.html">DataRequest</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/DataRequest/ErrorCode.html">– ErrorCode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UIColor.html">UIColor</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UIFont.html">UIFont</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UIFont/LatoFont.html">– LatoFont</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UIViewController.html">UIViewController</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/Requestable.html">Requestable</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>Movie</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">Movie</span> <span class="p">:</span> <span class="kt">Object</span><span class="p">,</span> <span class="kt">Mappable</span></code></pre>
+
+                </div>
+              </div>
+            
+<ul>
+<li>This mappable model is used to map the json</li>
+<li>with in a search result to parse the list of movies.</li>
+<li>This model is used to save in Realm database,</li>
+<li>incase you need to cache the movies info.
+//</li>
+<li><strong>IMPORTANT</strong>: This model is created to map response</li>
+<li>that comes in application/json format from the server.</li>
+</ul>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11TheMovieApp0B0C7movieIdSiv"></a>
+                    <a name="//apple_ref/swift/Property/movieId" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11TheMovieApp0B0C7movieIdSiv">movieId</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Parameters for search.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">dynamic</span> <span class="k">var</span> <span class="nv">movieId</span><span class="p">:</span> <span class="kt">Int</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11TheMovieApp0B0C5titleSSSgv"></a>
+                    <a name="//apple_ref/swift/Property/title" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11TheMovieApp0B0C5titleSSSgv">title</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">dynamic</span> <span class="k">var</span> <span class="nv">title</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11TheMovieApp0B0C13originalTitleSSSgv"></a>
+                    <a name="//apple_ref/swift/Property/originalTitle" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11TheMovieApp0B0C13originalTitleSSSgv">originalTitle</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">dynamic</span> <span class="k">var</span> <span class="nv">originalTitle</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11TheMovieApp0B0C10posterPathSSSgv"></a>
+                    <a name="//apple_ref/swift/Property/posterPath" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11TheMovieApp0B0C10posterPathSSSgv">posterPath</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">dynamic</span> <span class="k">var</span> <span class="nv">posterPath</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11TheMovieApp0B0C8overviewSSSgv"></a>
+                    <a name="//apple_ref/swift/Property/overview" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11TheMovieApp0B0C8overviewSSSgv">overview</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">dynamic</span> <span class="k">var</span> <span class="nv">overview</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11TheMovieApp0B0C9voteCountSSSgv"></a>
+                    <a name="//apple_ref/swift/Property/voteCount" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11TheMovieApp0B0C9voteCountSSSgv">voteCount</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">dynamic</span> <span class="k">var</span> <span class="nv">voteCount</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11TheMovieApp0B0C10popularitySSSgv"></a>
+                    <a name="//apple_ref/swift/Property/popularity" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11TheMovieApp0B0C10popularitySSSgv">popularity</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">dynamic</span> <span class="k">var</span> <span class="nv">popularity</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11TheMovieApp0B0C16originalLanguageSSSgv"></a>
+                    <a name="//apple_ref/swift/Property/originalLanguage" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11TheMovieApp0B0C16originalLanguageSSSgv">originalLanguage</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">dynamic</span> <span class="k">var</span> <span class="nv">originalLanguage</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11TheMovieApp0B0C11releaseDate10Foundation0E0VSgv"></a>
+                    <a name="//apple_ref/swift/Property/releaseDate" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11TheMovieApp0B0C11releaseDate10Foundation0E0VSgv">releaseDate</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">dynamic</span> <span class="k">var</span> <span class="nv">releaseDate</span><span class="p">:</span> <span class="kt">Date</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11TheMovieApp0B0C12backdropPathSSSgv"></a>
+                    <a name="//apple_ref/swift/Property/backdropPath" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11TheMovieApp0B0C12backdropPathSSSgv">backdropPath</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">dynamic</span> <span class="k">var</span> <span class="nv">backdropPath</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11TheMovieApp0B0CXeXecfc"></a>
+                    <a name="//apple_ref/swift/Method/init(map:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11TheMovieApp0B0CXeXecfc">init(map:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Parameters for search.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">required</span> <span class="n">convenience</span> <span class="nf">init</span><span class="p">?(</span><span class="nv">map</span><span class="p">:</span> <span class="kt">Map</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11TheMovieApp0B0C7mappingXeXeF"></a>
+                    <a name="//apple_ref/swift/Method/mapping(map:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11TheMovieApp0B0C7mappingXeXeF">mapping(map:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+<ul>
+<li>This function is where all variable mappings should occur
+for a json with info regarding a movie record.</li>
+<li>It is executed by Mapper during the mapping (serialization and deserialization) process.</li>
+</ul>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">mapping</span><span class="p">(</span><span class="nv">map</span><span class="p">:</span> <span class="kt">Map</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="o">&lt;&lt;</span><span class="n">error</span> <span class="n">type</span><span class="o">&gt;&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11TheMovieApp0B0C10primaryKeySSSgyFZ"></a>
+                    <a name="//apple_ref/swift/Method/primaryKey()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11TheMovieApp0B0C10primaryKeySSSgyFZ">primaryKey()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Used primary key to make the searches unique.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">override</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">primaryKey</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11TheMovieApp0B0C6RouterO"></a>
+                    <a name="//apple_ref/swift/Enum/Router" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11TheMovieApp0B0C6RouterO">Router</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Router implemements Requestable to customize different URL request attributes.</p>
+
+                        <a href="../Classes/Movie/Router.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">enum</span> <span class="kt">Router</span> <span class="p">:</span> <span class="kt"><a href="../Protocols/Requestable.html">Requestable</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2018 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2018-05-20)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

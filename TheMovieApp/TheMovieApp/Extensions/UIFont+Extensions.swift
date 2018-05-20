@@ -8,6 +8,7 @@
 
 import UIKit
 
+/// This extension consist of useful methods that can generate custom font
 extension UIFont {
 
     /// Used to provide Lato font to the Labels

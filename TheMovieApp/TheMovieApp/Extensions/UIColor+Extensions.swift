@@ -8,6 +8,7 @@
 
 import UIKit
 
+/// This extension consist of useful variables and methods that can generate custom colors
 extension UIColor {
     /**
     - Use to create a black color with transparency which is applied to

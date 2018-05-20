@@ -8,11 +8,14 @@
 
 import ObjectMapper
 
+/**
+ Used to make a date string to swift date transformation
+ while parsing a date string in json response.
+ */
 class DateTransform: DateFormatterTransform {
+    
     /**
-    - Used to make a date string to swift date transformation
-      while parsing a date string in json response.
-    - Parameter dateFormat needs to be passed to the initializer
+      parameter dateFormat needs to be passed to the initializer
       to support any date format that can be received from backend.
      */
     init(dateFormat: String) {
