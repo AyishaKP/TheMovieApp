@@ -11,7 +11,7 @@ import UIKit
 extension UIColor {
     /**
     - Use to create a black color with transparency which is applied to
-    - background of a text to make it more visible
+      background of a text to make it more visible
      */
     static let transparentBlack = UIColor(hex: 0x000000, alpha: 0.5)
 

@@ -22,9 +22,9 @@ class MoviesTableViewController: UITableViewController {
     var searchController = UISearchController()
     var searches: [Search]?
     var movies: [Movie] = []
+    var currentSearch: Search?
     var page: Int = 0
     var isLoading: Bool = false
-    var currentSearch: Search?
 
     // MARK: - View Life Cycle
     override func viewDidLoad() {
@@ -54,7 +54,6 @@ class MoviesTableViewController: UITableViewController {
     private func customizeTableView() {
         title = "M O V I E"
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "searchResultCell")
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "loadMoreCell")
         tableView.keyboardDismissMode = .interactive
     }
 

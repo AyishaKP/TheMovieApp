@@ -38,12 +38,12 @@ public extension Alamofire.Request {
     }
 }
 public extension Alamofire.DataRequest {
+
     /**
     - Using the validate method provided by Alamofire
-    - to check for differnt status codes in the response or
-    - handle various failed request scenarios.
+      to check for differnt status codes in the response or
+    - Handles various failed request scenarios.
      */
-
     @discardableResult
     func validateResponse() -> Self {
         return self.validate({ [weak self] (request, response, data) -> Alamofire.Request.ValidationResult in

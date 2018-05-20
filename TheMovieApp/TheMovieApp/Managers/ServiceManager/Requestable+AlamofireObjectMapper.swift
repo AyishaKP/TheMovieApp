@@ -12,9 +12,9 @@ import AlamofireObjectMapper
 import ObjectMapper
 
 /**
-- Default implementation of Requestable protocol
+- Default implementation of Requestable protocol.
 - Can implement these variables and methods
-- in enum, class or struct that implements Requestable protocol
+  in enum, class or struct that implements Requestable protocol.
  */
 extension Requestable {
     var `protocol`: String {
@@ -43,44 +43,43 @@ extension Requestable {
         return .get
     }
     /**
-    - Implement this method to call to initiate alamofire request
-    - Validate call will all the errors in the response.
-    - responseObject method provided by object mapper
-    - will handle json response serialization
+    - Implement this method to initiate a web service call using alamofire request.
+    - validateResponse call will validate all the errors in the response.
+    - responseObject method is used by object mapper to map to the generic model passed.
+    - Will handle json response serialization.
      */
     @discardableResult func requestJSON<T: BaseMappable>
         (with objectCompletion:@escaping (DataResponse<T>) -> Void) -> DataRequest {
-       return Alamofire.request(self).validate().responseObject(completionHandler: objectCompletion)
+       return RequestManager.shared.manager.request(self)
+        .validateResponse()
+        .responseObject(completionHandler: objectCompletion)
     }
+
     /**
-    - Implement this method to call to initiate alamofire request
-    - Validate call will all the errors in the response.
-    - responseArray method provided by object mapper
-    - will handle json array serialization
+     - Implement this method to initiate a web service call using alamofire request.
+     - validateResponse call will validate all the errors in the response.
+     - responseArray method is used by object mapper to map to the generic model passed.
+     - Will handle json response serialization.
      */
     @discardableResult func requestJSON<T: BaseMappable>
         (with arrayCompletion:@escaping (DataResponse<[T]>) -> Void) -> DataRequest {
-        return Alamofire.request(self).validate().responseArray(completionHandler: arrayCompletion)
+        return RequestManager.shared.manager.request(self)
+            .validateResponse()
+            .responseArray(completionHandler: arrayCompletion)
     }
+
     /**
-    - Implement this method to call to initiate alamofire request
-    - Validate call will all the errors in the response.
-    - responsePlistObject method provided by object mapper
-    - will handle xml response serialization
-    */
+     - Implement this method to initiate a web service call using alamofire request.
+     - validateResponse call will validate all the errors in the response.
+     - responseXMLToJsonObject method is used by object mapper
+       to map to the generic model passed.
+     - Will handle json response serialization.
+     */
     @discardableResult func requestXML<T: BaseMappable>
         (with objectCompletion:@escaping (DataResponse<T>) -> Void) -> DataRequest {
-        return Alamofire.request(self).validate().responsePlistObject(completionHandler: objectCompletion)
-    }
-    /**
-    - Implement this method to call to initiate alamofire request
-    - Validate call will all the errors in the response.
-    - responsePlistArray method provided by object mapper
-    - will handle xml array serialization
-    */
-    @discardableResult func requestXML<T: BaseMappable>
-        (with arrayCompletion:@escaping (DataResponse<[T]>) -> Void) -> DataRequest {
-        return Alamofire.request(self).validate().responsePlistArray(completionHandler: arrayCompletion)
+        return RequestManager.shared.manager.request(self)
+            .validateResponse()
+            .responseXMLToJsonObject(completionHandler: objectCompletion)
     }
 
     /// Created request based on all the parameters.

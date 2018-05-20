@@ -9,11 +9,21 @@
 import Alamofire
 import SwiftyBeaver
 
-class NetworkManager {
+final class NetworkManager {
 
+    /// Singleton Instance
     static let shared = NetworkManager()
 
-    let reachabilityManager = Alamofire.NetworkReachabilityManager(host: "api.themoviedb.org")
+    /// Access to initializer restricted.
+    private init() {
+
+    }
+
+    /// Reachability manager instantiated using the server path.
+    private let reachabilityManager = Alamofire.NetworkReachabilityManager(host: "api.themoviedb.org")
+
+    /// Variable that is updated when connectivity changes and
+    /// can tell if the server is reachable or not.
     var isReachable: Bool = false
 
     /// Method to check Network reachability
@@ -40,6 +50,7 @@ class NetworkManager {
 
             }
         }
+
         /// start listening
         reachabilityManager?.startListening()
     }

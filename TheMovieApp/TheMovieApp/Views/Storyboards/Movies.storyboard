@@ -13,6 +13,9 @@
         <array key="Lato-Black.ttf">
             <string>Lato-Black</string>
         </array>
+        <array key="Lato-Medium.ttf">
+            <string>Lato-Medium</string>
+        </array>
         <array key="Lato-Regular.ttf">
             <string>Lato-Regular</string>
         </array>
@@ -94,6 +97,42 @@
                                     <outlet property="posterImageView" destination="5Lp-ll-GeH" id="kAh-BC-zYt"/>
                                     <outlet property="releaseDateLabel" destination="Lwm-Xn-JK3" id="u0j-Yx-AHd"/>
                                     <outlet property="titleNameLabel" destination="dXz-h8-cfj" id="Qd9-a2-g9E"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="loadMoreCell" id="Igd-t1-bMq" customClass="LoadingTableViewCell" customModule="TheMovieApp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="355.5" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Igd-t1-bMq" id="mb9-7s-oSP">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vkx-89-Mti">
+                                            <rect key="frame" x="178.5" y="12" width="58.5" height="17"/>
+                                            <fontDescription key="fontDescription" name="Lato-Medium" family="Lato" pointSize="14"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="f5N-fF-pp4">
+                                            <rect key="frame" x="141.5" y="5.5" width="30" height="30"/>
+                                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="30" id="QaI-ky-GIL"/>
+                                                <constraint firstAttribute="height" constant="30" id="cJ6-Gj-dWl"/>
+                                            </constraints>
+                                            <color key="color" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </activityIndicatorView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="vkx-89-Mti" firstAttribute="top" secondItem="mb9-7s-oSP" secondAttribute="top" constant="12" id="QJj-mf-drI"/>
+                                        <constraint firstItem="f5N-fF-pp4" firstAttribute="centerY" secondItem="vkx-89-Mti" secondAttribute="centerY" id="UhH-Ws-B3k"/>
+                                        <constraint firstItem="vkx-89-Mti" firstAttribute="centerX" secondItem="mb9-7s-oSP" secondAttribute="centerX" constant="20" id="rSz-kv-VgQ"/>
+                                        <constraint firstItem="vkx-89-Mti" firstAttribute="leading" secondItem="f5N-fF-pp4" secondAttribute="trailing" constant="7" id="rfv-Nh-3gi"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="activityIndicator" destination="f5N-fF-pp4" id="x0O-b8-dkW"/>
+                                    <outlet property="loadingLabel" destination="vkx-89-Mti" id="Yat-q7-zis"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>

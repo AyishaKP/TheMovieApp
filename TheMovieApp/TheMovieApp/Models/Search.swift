@@ -10,11 +10,12 @@ import Foundation
 import RealmSwift
 
 /**
-- Created Search model for saving the search text and to manage the time stamp
+- Created Search model for saving the search text and to manage the time stamp.
 - Timestamp is used to show last 10 successful queries.
  */
 class Search: Object {
 
+    /// Parameters for search.
     @objc dynamic var query: String?
     @objc dynamic var timestamp: Date?
 

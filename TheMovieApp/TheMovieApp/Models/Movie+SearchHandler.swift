@@ -26,6 +26,7 @@ class SearchHandler: Mappable {
     var totalResults: String?
     var totalPages: String?
     var movies: [Movie]?
+
     /**
     - This function can be used to validate JSON prior to mapping.
     - Return nil to cancel mapping when status code is 7.
@@ -36,10 +37,11 @@ class SearchHandler: Mappable {
             return nil
         }
     }
+
     /**
-    // This function is where all variable mappings should occur
-    // for a json received for a search api response.
-    // It is executed by Mapper during the mapping (serialization and deserialization) process.
+    - This function is where all variable mappings should occur
+      for a json received for a search api response.
+    - It is executed by Mapper during the mapping (serialization and deserialization) process.
      */
     func mapping(map: Map) {
         page <- map["page"]

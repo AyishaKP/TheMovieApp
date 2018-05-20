@@ -13,6 +13,7 @@ import SwiftyBeaver
 extension MoviesTableViewController: UISearchBarDelegate {
 
     // MARK: - UISearchBarDelegate
+
     /**
     - This method call when search bar becomes first responder.
     - Makes sure that the tableView is reloaded to show auto suggestions.
@@ -33,6 +34,7 @@ extension MoviesTableViewController: UISearchBarDelegate {
         }
         fetchMovies(with: searchString)
     }
+
     /**
     - This method call when cancel button in search bar is pressed.
     - Makes sure that the tableView is reloaded to show the movies for last searched text.

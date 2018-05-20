@@ -36,20 +36,21 @@ extension MoviesTableViewController {
             movies.removeAll()
         }
     }
+
     /**
     - Send request using PromiseKit based blocks
-    - which gives the 'then' success completion block,
-    - and failure block is received using catch block.
-    //
+      which gives the 'then' success completion block,
+      and failure block is received using catch block.
+    
     - 'firstly' block is used to create a promise instance
-    - initiated with the response model.
-    //
+      initiated with the response model.
+    
     - 'then' block is used to handle the response,
-    - based on the model provided in the 'firstly' block.
-    //
+      based on the model provided in the 'firstly' block.
+    
     - Used the RealmManager to save the current search to support auto population and movies in the response.
     - catch block will receive all errors that were caught.
- */
+    */
     func sendRequest(with searchText: String) {
         firstly { () -> Promise<SearchHandler> in
             Movie.Router.search(searchText, page: page + 1).createRequest()

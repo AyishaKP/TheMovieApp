@@ -8,12 +8,16 @@
 
 import UIKit
 
-class ThemeManager {
+final class ThemeManager {
 
+    /// Singleton Instance
     static let shared: ThemeManager = ThemeManager()
+
+    /// Access to initializer restricted.
     private init() {
 
     }
+
     /// customization for NavigationBar and TextField appearence
     func customizeAppearance() {
         UINavigationBar.appearance().backgroundColor = UIColor.black

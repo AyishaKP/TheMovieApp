@@ -13,9 +13,16 @@ extension MoviesTableViewController {
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
+
+        /// When search is active, tableView will have cells with searches.
         if searchController.isActive {
             return 1
         }
+
+        /**
+        - When search is not active and when API call is loading,
+          tableView will have an extra cell to show Loading.
+        */
         if isLoading {
             return movies.count + 1
         }
@@ -33,13 +40,10 @@ extension MoviesTableViewController {
 
         if !searchController.isActive && isLoading && indexPath.section == movies.count {
             let loadCell = tableView.dequeueReusableCell(withIdentifier:
-                "loadMoreCell", for: indexPath)
-            loadCell.textLabel?.text = "Loading..."
-            loadCell.textLabel?.textAlignment = .center
-            loadCell.backgroundColor = UIColor.transparentBlack
-            loadCell.textLabel?.font = UIFont.latoFont(.medium, size: 14)
-            loadCell.textLabel?.textColor = UIColor.swanWhite
-            return loadCell
+                "loadMoreCell", for: indexPath) as? LoadingTableViewCell
+            loadCell?.backgroundColor = UIColor.transparentBlack
+            loadCell?.activityIndicator.startAnimating()
+            return loadCell!
         } else if searchController.isActive {
 
             let cell = tableView.dequeueReusableCell(withIdentifier:
