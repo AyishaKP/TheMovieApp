@@ -1,0 +1,64 @@
+PODS:
+  - Alamofire (4.6.0)
+  - AlamofireObjectMapper (5.0.0):
+    - Alamofire (~> 4.1)
+    - ObjectMapper (~> 3.0)
+  - EmptyDataSet-Swift (4.0.2)
+  - EVReflection/Core (5.5.2)
+  - EVReflection/XML (5.5.2):
+    - EVReflection/Core
+    - XMLDictionary
+  - ObjectMapper (3.1.0)
+  - PromiseKit (4.5.2):
+    - PromiseKit/Foundation (= 4.5.2)
+    - PromiseKit/QuartzCore (= 4.5.2)
+    - PromiseKit/UIKit (= 4.5.2)
+  - PromiseKit/Alamofire (4.5.2):
+    - Alamofire (~> 4.0)
+    - PromiseKit/CorePromise
+  - PromiseKit/CorePromise (4.5.2)
+  - PromiseKit/Foundation (4.5.2):
+    - PromiseKit/CorePromise
+  - PromiseKit/QuartzCore (4.5.2):
+    - PromiseKit/CorePromise
+  - PromiseKit/UIKit (4.5.2):
+    - PromiseKit/CorePromise
+  - Realm (3.1.1):
+    - Realm/Headers (= 3.1.1)
+  - Realm/Headers (3.1.1)
+  - RealmSwift (3.1.1):
+    - Realm (= 3.1.1)
+  - SDWebImage (4.3.0):
+    - SDWebImage/Core (= 4.3.0)
+  - SDWebImage/Core (4.3.0)
+  - SwiftyBeaver (1.5.1)
+  - XMLDictionary (1.4.1)
+
+DEPENDENCIES:
+  - Alamofire
+  - AlamofireObjectMapper
+  - EmptyDataSet-Swift
+  - EVReflection/XML
+  - ObjectMapper
+  - PromiseKit
+  - PromiseKit/Alamofire
+  - RealmSwift
+  - SDWebImage (~> 4.0)
+  - SwiftyBeaver
+
+SPEC CHECKSUMS:
+  Alamofire: f41a599bd63041760b26d393ec1069d9d7b917f4
+  AlamofireObjectMapper: 5fafc816351cbbc0d486611aaeba7461c0cbad49
+  EmptyDataSet-Swift: 6bac1f5e8885acf60967decbf9ec57f4ad293b42
+  EVReflection: d41e17998e6fe326bef86b836e980a8010afa5e4
+  ObjectMapper: 20505058f54e5c3ca69e1d6de9897d152a5369a6
+  PromiseKit: 743e497a5f505a470d3bbbf4ce0663c1268af0a4
+  Realm: 42d1c38a5b1bbcc828b48a7ce702cb86fc68adf4
+  RealmSwift: d31937ca6a6ee54acde64ec839523c0a3c04924b
+  SDWebImage: 6da6c8bca115addc4de8613362e1b15f66333825
+  SwiftyBeaver: 4f74563624b2c1e821c522c54142b5dd5ebb0f30
+  XMLDictionary: fa07b6ff422b3a91d47a5de9bc82e3fc04fbd167
+
+PODFILE CHECKSUM: d24fe7132c772148fe5b4c8b53c8a5781fc69d7a
+
+COCOAPODS: 1.2.0
